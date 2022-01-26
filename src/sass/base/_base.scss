@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    // font-family: 'Fredoka One',
+    //     cursive;
+    // font-family: 'Hind Madurai',
+    //     sans-serif;
+    // font-family: 'Roboto',
+    //     sans-serif;
+}
+
+// body.modal-open-main {
+//     overflow: hidden;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+.container {
+    height       : auto;
+    margin-left  : auto;
+    margin-right : auto;
+    padding-left : 15px;
+    padding-right: 15px;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1120px) {
+        width: 1280px;
+    }
+}
+
+ul {
+    list-style: none;
+    padding   : 0px;
+    margin    : 0px;
+}
+
+img {
+    display  : block;
+    max-width: 100%;
+
+}
