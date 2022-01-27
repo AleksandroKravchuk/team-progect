@@ -8,6 +8,7 @@
     line-height    : $lx;
     color          : $color;
     text-decoration: none;
+    cursor: pointer;
 }
 
 // Основной текст
@@ -45,4 +46,17 @@
     background-position: center;
 }
 
-
+// Кнопка
+@mixin button ($img: url(../images/), $wh:30px, $ht:30px, $bz:cover) {
+font-family: DM Sans;
+font-style : normal;
+font-weight: bold;
+font-size  : 16px;
+line-height: 1.31;
+padding: 10px 40px;
+background: #FFFFFF;
+border-radius: 22px;
+color: #D41443;
+border: none;
+cursor: pointer;
+}

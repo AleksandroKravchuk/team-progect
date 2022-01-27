@@ -1,12 +1,40 @@
-.page-header {
+.header-hero {
     background-color: $bckg-color-accent;
     padding-top: 37px;
     padding-bottom: 45px;
 }
-.header {
+.page-header .container{
     display: flex;
     align-items: center;    
 }
+
+.page-header__nav {
+    margin-left: 110px;
+}
+.page-header__list {
+    display: flex;
+    align-items: center;
+}
+.page-header__item:not(:last-child) {
+    margin-right: 35px;
+}
+.page-header__button {
+    margin-left: auto;
+    @include button ()
+       
+}
+
+.page-header__link {
+    @include text-link ($fw: bold,$fs: 16px,$lx: 1.31,$color: $text-color-white);
+    transition: color 300ms linear;
+    &:hover, 
+    &:focus {
+color: $accent-color;
+    }
+ 
+    
+}
+
 // .page-header__nav {
 //         @media screen and (max-width: 767px) {
 // display : block;
