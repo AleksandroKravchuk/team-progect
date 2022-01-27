@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+font-family: 'DM Sans',
+sans-serif;
+font-family: 'Titan One',
+cursive;
+}
+
+// body.modal-open-main {
+//     overflow: hidden;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+.container {
+    width: 100%;
+    margin-left  : auto;
+    margin-right : auto;
+    padding-left : 10px;
+    padding-right: 10px;
+
+    @media screen and (min-width: 480px) {
+        width: 300px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 720px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 1080px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+ul {
+    list-style: none;
+    padding   : 0px;
+    margin    : 0px;
+}
+
+img {
+    display  : block;
+    max-width: 100%;
+
+}
