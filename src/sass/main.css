@@ -3,6 +3,11 @@ html {
           box-sizing: border-box;
 }
 
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Titan One', cursive;
+}
+
 h1,
 h2,
 h3,
@@ -14,28 +19,30 @@ p {
 }
 
 .container {
-  height: auto;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    width: 300px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 720px;
   }
 }
 
-@media screen and (min-width: 1120px) {
+@media screen and (min-width: 1280px) {
   .container {
-    width: 1280px;
+    width: 1080px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -332,8 +339,67 @@ summary {
   overflow: hidden;
 }
 
-.start {
-  font-size: 30px;
-  color: orangered;
+.header-hero {
+  background-color: #FFB8CA;
+  padding-top: 37px;
+  padding-bottom: 45px;
+}
+
+.page-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-header__nav {
+  margin-left: 110px;
+}
+
+.page-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-header__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.page-header__button {
+  margin-left: auto;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.31;
+  padding: 10px 40px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  color: #D41443;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__link {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.31;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 300ms linear;
+  transition: color 300ms linear;
+}
+
+.page-header__link:hover, .page-header__link:focus {
+  color: #D41443;
 }
 /*# sourceMappingURL=main.css.map */

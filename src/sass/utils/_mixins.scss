@@ -1,72 +1,62 @@
-// @mixin text($fw: normal, $fs: 16px, $lx: 1.5, $color: $main-text-color, $opa: 0.7) {
-//     font-family    : Roboto;
-//     font-style     : normal;
-//     font-weight    : $fw;
-//     font-size      : $fs;
-//     line-height    : $lx;
-//     color          : $color;
-//     opacity        : $opa;
-//     text-decoration: none;
-// }
 
-// @mixin secondary-text($fw: 600, $fs: 44.2px, $lx: 1.4, $color: $main-text-color, $opa:1) {
-//     font-family: Hind Madurai;
-//     font-style : normal;
-//     font-weight: $fw;
-//     font-size  : $fs;
-//     line-height: $lx;
-//     color      : $color;
-//     opacity    : $opa;
-// }
+// Текст для ссылок, кнопок
+@mixin text-link($fw: normal, $fs: 14px, $lx: 1.29, $color: $text-color-white) {
+    font-family: DM Sans;
+    font-style : normal;
+    font-weight    : $fw;
+    font-size      : $fs;
+    line-height    : $lx;
+    color          : $color;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-// @mixin pay ($img: url(../images/buy1.svg), $bz:14px 14px) {
-//     content            : "";
-//     display            : inline-block;
-//     width              : 30px;
-//     height             : 30px;
-//     background         : #FFFFFF;
-//     border-radius      : 3px;
-//     background-size    : $bz;
-//     background-repeat  : no-repeat;
-//     margin-right       : 10px;
-//     background-image   : $img;
-//     background-position: center;
-//     margin-bottom      : -8px;
-// }
+// Основной текст
+@mixin main-text($fw: 400, $fs: 14px, $lx: 1.93, $color: $text-color-white, $ls:0.04) {
+    font-family: DM Sans;
+    font-style : normal;
+    font-weight: $fw;
+    font-size  : $fs;
+    line-height: $lx;
+    color      : $color;
+    letter-spacing: $ls;
+}
 
-// @mixin button-pay ($bs: url(../images/googleplay.png)) {
-//     display            : inline-block;
-//     content            : "";
-//     height             : 36px;
-//     width              : 50px;
-//     background-image   : $bs;
-//     background-position: center;
-//     background-repeat  : no-repeat;
-//     background-size    : cover;
-//     cursor             : pointer;
-//     margin-right       : 3px;
-//     margin-top         : 7px;
+// Декоративный цвет (заголовки)
+@mixin secondary-text($fw: 400, $fs: 58px, $lx: 1.14, $color: $text-color-white, $ls:0.06) {
+    font-family   : Titan One;
+    font-style    : normal;
+    font-weight   : $fw;
+    font-size     : $fs;
+    line-height   : $lx;
+    color         : $color;
+    letter-spacing: $ls;
+    text-transform: uppercase;
+}
 
-// }
+// Псевдоэлемент. Указать свои размеры и позиционировать марджинами
+@mixin beefore ($img: url(../images/),$wh:30px,$ht:30px, $bz:cover) {
+    content            : "";
+    display            : inline-block;
+    background-image   : $img;
+    width              : $wh;
+    height             : $ht;
+    background-size    : $bz;
+    background-repeat  : no-repeat;
+    background-position: center;
+}
 
-// @mixin custom-bg($bg_url, $bg_size, $bg-color, $bg-repeat, $bg-position) {
-//     // You can write own styles for background
-//     background-image     : url($bg_url);
-//     background-repeat    : $bg-repeat;
-//     background-attachment: inherit;
-//     background-size      : $bg_size;
-//     background-color     : $bg-color;
-//     background-position  : $bg-position;
-// }
-
-// @mixin mobile ($bi:url(../images/ice-kream/icons2.png)) {
-//     display            : inline-block;
-//     content            : "";
-//     width              : 30px;
-//     height             : 30px;
-//     background-image   : $bi;
-//     background-position: center;
-//     background-repeat  : no-repeat;
-//     background-size    : cover;
-//     margin-right       : 10px;
-// }
+// Кнопка
+@mixin button ($img: url(../images/), $wh:30px, $ht:30px, $bz:cover) {
+font-family: DM Sans;
+font-style : normal;
+font-weight: bold;
+font-size  : 16px;
+line-height: 1.31;
+padding: 10px 40px;
+background: #FFFFFF;
+border-radius: 22px;
+color: #D41443;
+border: none;
+cursor: pointer;
+}
