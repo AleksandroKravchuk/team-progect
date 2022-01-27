@@ -3,12 +3,10 @@ html {
 }
 
 body {
-    // font-family: 'Fredoka One',
-    //     cursive;
-    // font-family: 'Hind Madurai',
-    //     sans-serif;
-    // font-family: 'Roboto',
-    //     sans-serif;
+font-family: 'DM Sans',
+sans-serif;
+font-family: 'Titan One',
+cursive;
 }
 
 // body.modal-open-main {
@@ -38,7 +36,7 @@ p {
     @media screen and (min-width: 768px) {
         width: 768px;
     }
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1280px) {
         width: 1280px;
     }
 }
