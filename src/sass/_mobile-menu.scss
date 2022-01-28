@@ -1,0 +1,148 @@
+.menu-button  {
+    position: absolute;
+    top: 23px;
+    right: 34px;
+    fill            : $text-color-white;
+    border          : none;
+    background-color: transparent;
+    @media screen and (min-width: 1280px) {
+        display: none;
+    }
+}
+.menu-button-burger.is-open .menu-button__icon--cross {
+    display: none;
+}
+.menu-button__icon--menu {
+    
+}
+.menu-button-burger {
+    @media screen and (max-width: 330px) {
+        margin-left: auto;
+    }
+    background-color: transparent;
+    border          : none;
+    cursor          : pointer;
+    margin-left     : 61px;
+    z-index         : 10;
+    @media screen and (min-width: 768px) {
+        margin-left: 291px;
+    }
+    @media screen and (min-width: 1280px) {
+        display: none;
+    }
+}
+.page-header__nav {
+@media screen and (max-width:767px) {
+ top     : -5px;
+ left    : 0;    
+    }
+        @media screen and (min-width: 768px) and (max-width: 1279px){
+ top : -37px;
+left : -30;     
+    }
+
+@media screen and (max-width: 1279px) {
+display : block;
+ position: absolute;
+ height  : 100vh;
+ width   : 254px;
+ padding: 24px;
+background-color: #E17992;
+transform: translateX(-100%);
+opacity: 0;
+transition: transform 300ms linear, opacity 300ms linear;
+}
+}
+.page-header__nav.is-open{
+    @media screen and (max-width: 1279px) {
+    z-index: 300;
+    transform: translateX(0);
+    opacity: 1;
+}
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        transform: translateX(-55%);
+        
+    }
+}
+// .page-header__list {  
+
+//     @media screen and (max-width: 767px) { 
+// padding: 30px;
+// height: 100%;   
+// }
+
+//     @media screen and (min-width: 768px) {   
+// display : flex;       
+// flex-direction: row;
+// align-items: center;
+// margin-left: 100px;
+// }
+//     @media screen and (min-width: 1120px) {
+//     margin-left: 266px}
+
+// }
+// .page-header__item:not(:last-child){
+//       @media screen and (min-width: 768px) {
+//     margin-right: 40px;
+//   }
+
+// } 
+// .page-header__link {
+//     @media screen and (max-width: 767px) {
+//     @include text ($fw: 500,$fs:16px, $lx:1.14, $color:$header-color, $opa:0.8);
+//     padding: 20px 0px;
+//     display: flex;
+//     align-items: center;
+//     border-bottom: 1px solid #DCDCDC;
+//     &::before {
+//       @include mobile ($bi:url(../images/ice-kream/icons1.png)) 
+//     }
+// }
+
+//     @media screen and (min-width: 768px) {
+//     @include text ($fs:14px, $lx:1.14, $color:$header-color, $opa:0.6);
+// }
+// @include text ($fs:14px,$lx:1.14,$color:$header-color,$opa:0.6);
+// transition:all 300ms linear;
+// &:hover,
+// &:focus {
+// color: $accent-color;
+// font-weight: bold;
+// font-size  : 15px;
+// line-height: 1.2;
+// fill: $footer-text-color;
+// }
+// }
+// .page-header__link[href="#product"] {
+//     @media screen and (max-width: 767px) {
+//         &::before {
+//             @include mobile ($bi:url(../images/ice-kream/icons2.png))
+//         }
+//     }
+// }
+// .page-header__link[href="#pricing"]{
+// @media screen and (max-width: 767px) {
+//     &::before {
+//         @include mobile ($bi:url(../images/ice-kream/icons3.png))
+//     }
+// }
+// }
+// .page-header__link[href="#contakt"] {
+//     @media screen and (max-width: 767px) {
+//         &::before {
+//             @include mobile ($bi:url(../images/ice-kream/icons2.png))
+//         }
+//     }
+// }
+// .page-header__icon {
+// margin-left: auto;
+//     @media screen and (min-width: 768px) {
+//         display: none;
+//     }
+// }
+// .page-header__button {
+// @extend .button;
+// margin-left: auto;
+// @media screen and (max-width: 1119px) {
+//     display: none;}
+// }
