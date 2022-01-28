@@ -1,4 +1,278 @@
-.start {
-    font-size: 30px;
-    color:orangered
+.header-hero {
+    background-color: $bckg-color-accent;
+    padding-top: 37px;
+    padding-bottom: 56px;
 }
+.page-header {
+    display: flex;
+    align-items: center;    
+}
+
+.page-header__nav {
+    display: none;
+    @media screen and (min-width: 1280px) {
+    margin-left: 110px;   
+    display: block;
+     } 
+}
+.page-header__list {
+    display: flex;
+    align-items: center;
+}
+.page-header__item:not(:last-child) {
+    margin-right: 35px;
+}
+.page-header__button {
+    display: none;
+    @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+    @include button ();
+    &-icon {
+    margin-left: 12px;}
+    &:hover, 
+    &:focus {
+    background: #ECEBEB;}
+    }
+  }
+.page-header__link {
+    @include text-link ($fw: bold,$fs: 16px,$lx: 1.31,$color: $text-color-white);
+    transition: color 300ms linear;
+    &:hover, 
+    &:focus {
+color: $accent-color;
+    }
+}
+.menu-button-burger {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 291px;
+     @media screen and (min-width: 1280px) {
+     display    : none;
+ }
+}
+
+// ГЕРОЙ
+.hero {
+margin-top: 84px; 
+  
+}
+.hero__content {
+margin-left: 60px;     
+width:277px;
+}
+.hero__name {
+@include secondary-text ($fw: 400,$fs: 38px,$lx: 1.15,$color: $text-color-white,$ls:0.04);
+text-transform: uppercase;
+
+}
+.hero__name-accent {
+@include secondary-text ($fs: 58px,$color: $accent-color);
+}
+
+.hero__list {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+.hero__item:not(:last-child) {
+    margin-right: 17px;
+}
+.hero__link-products {
+@include text-link (); 
+display: block;
+padding: 9px 18px;
+background-color: $accent-color;
+border-radius: 20px;
+ &:hover,
+ &:focus {
+     background-color: #C7133E;
+ }
+}
+.hero__link-how {
+@include text-link ($color: $accent-color); 
+display: block; 
+padding: 9px 18px;
+background-color: $text-color-white;
+border-radius: 20px;
+&:hover,
+&:focus {
+    background-color: #ECEBEB;;
+}
+}
+.hero__text-box {
+ width: 200px;   
+ margin-top: 112px;
+margin-left: 240px;
+}
+.hero__text {
+    @include main-text ($lx: 1.43)
+}
+.hero__button {
+    width: 26px;
+    height: 26px;
+    background-color: $text-color-white;
+    fill: $accent-color;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 20px;
+    &:hover,
+    &:focus {
+    background-color: #ECEBEB;
+    fill: #C7133E;
+}
+}
+
+// Квадратики с цифрами справа
+.hero__sektion {
+    display: flex;
+}
+.hero__card-box {
+  
+    margin-left: auto;
+}
+.hero__card-first {
+margin-left: auto;
+display: flex;
+position: relative;
+width: 72px;
+height: 77px;
+justify-content: flex-end;
+margin-bottom: 18px;
+}
+.hero__card-second {
+    position: relative;
+    display: flex;
+    width: 92px;
+    height: 76px;
+    justify-content: flex-end;
+}
+.hero__card-numb {
+   position: absolute;
+   z-index: 20;
+    @include secondary-text ($fw: 400, $fs: 46px, $lx: 1.15, $color: $accent-color, $ls: 0.04);
+    &::after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: -18px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $text-color-white;
+        z-index: 1;
+    }
+}
+.hero__card-text {
+    @include main-text ($lx: 1.28);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+// .page-header__nav {
+//         @media screen and (max-width: 767px) {
+// display : block;
+//  position: absolute;
+//  top     : 70px;
+//  left    : 0;
+//  height  : 100vh;
+//  width   : 80%;
+// background-image: linear-gradient(to right, #FFFFFF, #D64374);
+// transform: translateX(-100%);
+// opacity: 0;
+// transition: transform 300ms linear, opacity 300ms linear;
+
+// }
+// }
+// .page-header__nav.is-open{
+//     @media screen and (max-width: 767px) {
+//     z-index: 3;
+//     transform: translateX(0);
+//     opacity: 1;
+// }
+// }
+// .page-header__list {  
+
+//     @media screen and (max-width: 767px) { 
+// padding: 30px;
+// height: 100%;   
+// }
+
+//     @media screen and (min-width: 768px) {   
+// display : flex;       
+// flex-direction: row;
+// align-items: center;
+// margin-left: 100px;
+// }
+//     @media screen and (min-width: 1120px) {
+//     margin-left: 266px}
+
+// }
+// .page-header__item:not(:last-child){
+//       @media screen and (min-width: 768px) {
+//     margin-right: 40px;
+//   }
+
+// } 
+// .page-header__link {
+//     @media screen and (max-width: 767px) {
+//     @include text ($fw: 500,$fs:16px, $lx:1.14, $color:$header-color, $opa:0.8);
+//     padding: 20px 0px;
+//     display: flex;
+//     align-items: center;
+//     border-bottom: 1px solid #DCDCDC;
+//     &::before {
+//       @include mobile ($bi:url(../images/ice-kream/icons1.png)) 
+//     }
+// }
+    
+//     @media screen and (min-width: 768px) {
+//     @include text ($fs:14px, $lx:1.14, $color:$header-color, $opa:0.6);
+// }
+// @include text ($fs:14px,$lx:1.14,$color:$header-color,$opa:0.6);
+// transition:all 300ms linear;
+// &:hover,
+// &:focus {
+// color: $accent-color;
+// font-weight: bold;
+// font-size  : 15px;
+// line-height: 1.2;
+// fill: $footer-text-color;
+// }
+// }
+// .page-header__link[href="#product"] {
+//     @media screen and (max-width: 767px) {
+//         &::before {
+//             @include mobile ($bi:url(../images/ice-kream/icons2.png))
+//         }
+//     }
+// }
+// .page-header__link[href="#pricing"]{
+// @media screen and (max-width: 767px) {
+//     &::before {
+//         @include mobile ($bi:url(../images/ice-kream/icons3.png))
+//     }
+// }
+// }
+// .page-header__link[href="#contakt"] {
+//     @media screen and (max-width: 767px) {
+//         &::before {
+//             @include mobile ($bi:url(../images/ice-kream/icons2.png))
+//         }
+//     }
+// }
+// .page-header__icon {
+// margin-left: auto;
+//     @media screen and (min-width: 768px) {
+//         display: none;
+//     }
+// }
+// .page-header__button {
+// @extend .button;
+// margin-left: auto;
+// @media screen and (max-width: 1119px) {
+//     display: none;}
+// }
