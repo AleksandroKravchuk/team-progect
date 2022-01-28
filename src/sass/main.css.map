@@ -1,0 +1,23 @@
+{
+    "version": 3,
+
+    "sources": [
+        "main.scss",
+        "base/_base.scss",
+        "base/_stylesheet.scss",
+        "utils/_hidden.scss",
+        "utils/_mixins.scss",
+        "utils/_variables.scss",
+        "_header.scss",
+        "_hero.scss",
+        "_products.scss",
+        "_how-is-made.scss",
+        "_foto.scss",
+        "_slider.scss",
+        "_adress.scss",
+        "_footer.scss",
+        "_modal.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
