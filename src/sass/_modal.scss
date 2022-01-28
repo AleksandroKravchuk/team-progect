@@ -28,12 +28,31 @@
   height: 80%;
   @media screen and (min-width: 480px) {
     width: 300px;
+    &--locations {
+      width: 296px;
+      height: 222px;
+      font-size: 18px;
+      line-height: 1.13;
+      padding: 5px 8px;
+    }
   }
   @media screen and (min-width: 768px) {
     width: 720px;
+    &--locations {
+      height: 540px;
+      font-size: 22px;
+      line-height: 1.13;
+      padding: 10px 15px;
+    }
   }
   @media screen and (min-width: 1280px) {
     width: 1080px;
+    &--locations {
+      height: 810px;
+      font-size: 24px;
+      line-height: 1.13;
+      padding: 15px 30px;
+    }
   }
 
   /*  Центрируем и задаем z-index */
@@ -50,6 +69,18 @@
   border-radius: 3px;
   background-color: #fff;
   transition: 0.3s all;
+}
+.modal__title {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  // font-size: 58px;
+  // line-height: 66px;
+  // text-align: right;
+  letter-spacing: 0.04em;
+  padding-bottom: 10px;
+
+  color: #d41443;
 }
 
 /* Стили для активных классов подложки и окна */
