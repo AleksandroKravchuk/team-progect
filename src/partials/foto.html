@@ -1,0 +1,35 @@
+<section class="section">
+  <div class="container Gallery"></div>
+  <h2 class="Gallery__title">Gallery</h2>
+  <div>
+    <picture>
+      <source
+        media="(min-width:1280px)"
+        srcset="
+          images/gallery-section/gallery-bck.jpg         1x,
+          images/gallery-section/gallery-bck@2x-desk.jpg 2x
+        "
+      />
+      <source
+        media="(min-width:768px)"
+        srcset="
+          images/gallery-section/gallery-bck-tab.jpg    1x,
+          images/gallery-section/gallery-bck@2x-tab.jpg 2x
+        "
+      />
+
+      <source
+        media="(min-width:480px)"
+        srcset="
+          images/gallery-section/gallery-bck-mob.jpg    1x,
+          images/gallery-section/gallery-bck@2x-mob.jpg 2x
+        "
+      />
+      <img
+        src="images/gallery-section/gallery-bck.jpg"
+        alt="ice-cream-photo"
+        class="Gallery__photo"
+      />
+    </picture>
+  </div>
+</section>
