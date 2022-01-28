@@ -1007,6 +1007,11 @@ summary {
   cursor: pointer;
 }
 
+.modal__cross:hover,
+.modal__cross:focus {
+  fill: #d41443;
+}
+
 /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
 .js-link {
   padding: 20px;
