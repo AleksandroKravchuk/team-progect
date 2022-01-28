@@ -147,16 +147,26 @@ margin-bottom: 18px;
     display: flex;
     width: 92px;
     height: 76px;
-    justify-content: flex-end;
+    justify-content: flex-end;  
 }
-.hero__card-numb {
-   position: absolute;
-   z-index: 20;
-    @include secondary-text ($fw: 400, $fs: 46px, $lx: 1.15, $color: $accent-color, $ls: 0.04);
+
+.hero__card-text {
+    @include main-text ($lx: 1.28);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+      &::before {
+       @include secondary-text ($fw: 400, $fs: 46px, $lx: 1.15, $color: $accent-color, $ls: 0.04);   
+      content         : "16";
+      position        : absolute;
+      top             : -52px;
+      right           : 0;
+      z-index         : 5;
+  }
     &::after {
         content: "";
         position: absolute;
-        top: -5px;
+        top: -60px;
         right: -18px;
         width: 30px;
         height: 30px;
@@ -165,11 +175,29 @@ margin-bottom: 18px;
         z-index: 1;
     }
 }
-.hero__card-text {
+.hero__card-text1 {
     @include main-text ($lx: 1.28);
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    position               : absolute;
+    right                  : 0;
+    bottom                 : 0;
+    &::before {
+        @include secondary-text ($fw: 400, $fs: 46px, $lx: 1.15, $color: $accent-color, $ls: 0.04);
+        content                     : "23";
+        position                    : absolute;
+        top                         : -52px;
+        right                       : 0;
+        z-index                     : 5;}
+    &::after {
+        content         : "";
+        position        : absolute;
+        top             : -60px;
+        right           : -18px;
+        width           : 30px;
+        height          : 30px;
+        border-radius   : 50%;
+        background-color: $text-color-white;
+        z-index         : 1;
+    }
 }
 
 // .page-header__nav {
