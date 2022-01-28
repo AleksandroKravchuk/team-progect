@@ -26,6 +26,108 @@
   width: 100%;
   // max-width: 500px;
   height: 80%;
+  &--eco {
+    /* Scene styles here */
+    .modal__scene {
+      width: 720px;
+      height: 540px;
+      overflow: hidden;
+      position: relative;
+      background-image: linear-gradient(rgb(28, 116, 175), skyblue);
+    }
+
+    .modal__sun {
+      width: 22%;
+      height: 27%;
+      background-image: url(images/sun.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      animation-name: bounce;
+    }
+
+    @keyframes bounce {
+      from {
+        transform: scale(1.1);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .modal__clouds {
+      height: 30%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      background-image: url(images/cloud.png), url(images/cloud-1.png), url(images/cloud-2.png);
+      background-repeat: no-repeat;
+      background-position: top 50px right, top 100px center, top 30px left 200px;
+
+      animation-name: sky-motion;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-duration: 40s;
+    }
+
+    @keyframes sky-motion {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .modal__plane {
+      height: 20%;
+      width: 85%;
+      position: absolute;
+      overflow: hidden;
+      bottom: 40%;
+      background-image: url(images/plane-4.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: contain;
+
+      animation-name: motion;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 10s;
+      transform: rotateY(180deg);
+    }
+
+    @keyframes motion {
+      0% {
+        transform: translateX(100%);
+      }
+      25% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(-100%) rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(180deg) translateX(-100%);
+      }
+    }
+    .modal__hills {
+      height: 80%;
+      width: 110%;
+      position: absolute;
+      bottom: 0;
+      left: -5%;
+      /* z-index: 1; */
+      background-image: url(images/pngegg.png);
+      background-position: center bottom -50px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
   @media screen and (min-width: 480px) {
     width: 300px;
     &--locations {
@@ -72,9 +174,6 @@
   font-family: Titan One;
   font-style: normal;
   font-weight: normal;
-  // font-size: 58px;
-  // line-height: 66px;
-  // text-align: right;
   letter-spacing: 0.04em;
   padding-bottom: 10px;
 
