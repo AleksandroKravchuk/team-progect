@@ -12,9 +12,7 @@
 .menu-button-burger.is-open .menu-button__icon--cross {
     display: none;
 }
-.menu-button__icon--menu {
-    
-}
+
 .menu-button-burger {
     @media screen and (max-width: 330px) {
         margin-left: auto;
@@ -31,6 +29,7 @@
     @media screen and (min-width: 1280px) {
         display: none;
     }
+  
 }
 .page-header__nav {
 @media screen and (max-width:767px) {
