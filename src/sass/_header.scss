@@ -410,6 +410,7 @@
     width: 171px;
     top: 180%;
     left: 30%;
+    
   }
   position: absolute;
   top: 12%;
@@ -423,6 +424,7 @@
       transform: translateY(50%);
       opacity: 0;
     }
+ 
     100% {
       opacity: 1;
       transform: translateY(0);
