@@ -1,0 +1,1399 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-family: "Titan One", cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1080px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.header-hero {
+  background-color: #FFB8CA;
+  padding-top: 37px;
+  padding-bottom: 56px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.header-hero .container {
+  position: relative;
+}
+
+.page-header__nav {
+  position: absolute;
+  left: 20%;
+  z-index: 5;
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .page-header__nav {
+    margin-left: 110px;
+    display: block;
+  }
+}
+
+.page-header__list {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.page-header__button {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .page-header__button {
+    display: block;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.31;
+    padding: 12px 30px 12px 40px;
+    background: #FFFFFF;
+    border-radius: 22px;
+    color: #D41443;
+    border: none;
+    cursor: pointer;
+  }
+  .page-header__button-icon {
+    margin-left: 12px;
+  }
+  .page-header__button:hover, .page-header__button:focus {
+    background: #ECEBEB;
+  }
+}
+
+.page-header__link {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.31;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 300ms linear;
+}
+.page-header__link:hover, .page-header__link:focus {
+  color: #D41443;
+}
+
+.menu-button-burger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 291px;
+}
+@media screen and (min-width: 1280px) {
+  .menu-button-burger {
+    display: none;
+  }
+}
+
+.hero {
+  margin-top: 84px;
+}
+
+.hero__content {
+  margin-left: 60px;
+  width: 277px;
+}
+
+.hero__name {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.15;
+  color: #FFFFFF;
+  letter-spacing: 0.04;
+  text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+.hero__name-accent {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 1.14;
+  color: #D41443;
+  letter-spacing: 0.06;
+  text-transform: uppercase;
+}
+
+.hero__list {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__item:not(:last-child) {
+  margin-right: 17px;
+}
+
+.hero__link-products {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  padding: 9px 18px;
+  background-color: #D41443;
+  border-radius: 20px;
+}
+.hero__link-products:hover, .hero__link-products:focus {
+  background-color: #C7133E;
+}
+
+.hero__link-how {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #D41443;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  padding: 9px 18px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+.hero__link-how:hover, .hero__link-how:focus {
+  background-color: #ECEBEB;
+}
+
+.hero__text-box {
+  width: 200px;
+  margin-top: 112px;
+  margin-left: 240px;
+}
+
+.hero__text {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #FFFFFF;
+  letter-spacing: 0.04;
+}
+
+.hero__button {
+  width: 26px;
+  height: 26px;
+  background-color: #FFFFFF;
+  fill: #D41443;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.hero__button:hover, .hero__button:focus {
+  background-color: #ECEBEB;
+  fill: #C7133E;
+}
+
+.hero__sektion {
+  display: flex;
+}
+
+.hero__card-box {
+  margin-left: auto;
+}
+
+.hero__card-first {
+  margin-left: auto;
+  display: flex;
+  position: relative;
+  width: 72px;
+  height: 77px;
+  justify-content: flex-end;
+  margin-bottom: 18px;
+}
+
+.hero__card-second {
+  position: relative;
+  display: flex;
+  width: 92px;
+  height: 76px;
+  justify-content: flex-end;
+}
+
+.hero__card-text {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  color: #FFFFFF;
+  letter-spacing: 0.04;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.hero__card-text::before {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 1.15;
+  color: #D41443;
+  letter-spacing: 0.04;
+  text-transform: uppercase;
+  content: "16";
+  position: absolute;
+  top: -52px;
+  right: 0;
+  z-index: 5;
+}
+.hero__card-text::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+
+.hero__card-text1 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  color: #FFFFFF;
+  letter-spacing: 0.04;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.hero__card-text1::before {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 1.15;
+  color: #D41443;
+  letter-spacing: 0.04;
+  text-transform: uppercase;
+  content: "23";
+  position: absolute;
+  top: -52px;
+  right: 0;
+  z-index: 5;
+}
+.hero__card-text1::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+
+.hero__kolo {
+  position: absolute;
+  top: 2%;
+  left: 40%;
+  -webkit-animation-name: kolo;
+          animation-name: kolo;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+@-webkit-keyframes kolo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes kolo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero__milk {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  -webkit-animation-name: milk;
+          animation-name: milk;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+@-webkit-keyframes milk {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes milk {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero__girl {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  -webkit-animation-name: girl;
+          animation-name: girl;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+@-webkit-keyframes girl {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes girl {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero__ice {
+  position: absolute;
+  top: 14%;
+  right: 28%;
+  -webkit-animation-name: ice;
+          animation-name: ice;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+@-webkit-keyframes ice {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ice {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Gallery__photo {
+  background-image: url(../images/gallery-section/gallery-bck.jpg);
+}
+/* Стили для подложки */
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 184, 202, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+  /*  Установаем ширину окна  */
+  width: 100%;
+  height: 80%;
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  /* Должен быть выше чем у подложки*/
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+.modal--eco {
+  /* Scene styles here */
+}
+.modal--eco .modal__scene {
+  width: 100%;
+  height: 95%;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(#1c74af, skyblue);
+}
+.modal--eco .modal__sun {
+  width: 22%;
+  height: 27%;
+  background-image: url(../images/sun.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.modal--eco .modal__clouds {
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-image: url(../images/cloud.png), url(../images/cloud-1.png), url(../images/cloud-2.png);
+  background-repeat: no-repeat;
+  background-position: top 50px right, top 100px center, top 30px left 200px;
+  -webkit-animation-name: sky-motion;
+          animation-name: sky-motion;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+}
+@-webkit-keyframes sky-motion {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes sky-motion {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.modal--eco .modal__plane {
+  height: 20%;
+  width: 85%;
+  position: absolute;
+  overflow: hidden;
+  bottom: 40%;
+  background-image: url(../images/plane-4.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  -webkit-animation-name: motion;
+          animation-name: motion;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  transform: rotateY(180deg);
+}
+@-webkit-keyframes motion {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%) rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(180deg) translateX(-100%);
+  }
+}
+@keyframes motion {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%) rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(180deg) translateX(-100%);
+  }
+}
+.modal--eco .modal__hills {
+  height: 80%;
+  width: 110%;
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  /* z-index: 1; */
+  background-image: url(../images/pngegg.png);
+  background-position: center bottom -50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 720px;
+  }
+  .modal--locations {
+    height: 540px;
+    font-size: 22px;
+    line-height: 1.13;
+    padding: 10px 15px;
+  }
+  .modal--eco {
+    font-size: 22px;
+    line-height: 1.13;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .modal {
+    width: 1080px;
+  }
+  .modal--locations {
+    height: 810px;
+    font-size: 24px;
+    line-height: 1.13;
+    padding: 15px 30px;
+  }
+  .modal--eco {
+    font-size: 24px;
+    line-height: 1.13;
+  }
+  .modal--eco .modal__sun {
+    width: 15%;
+    height: 22%;
+  }
+}
+
+.modal__title {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  padding-bottom: 10px;
+  color: #d41443;
+}
+
+/* Стили для активных классов подложки и окна */
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #ffa5ba;
+  cursor: pointer;
+}
+
+.modal__cross:hover,
+.modal__cross:focus {
+  fill: #d41443;
+}
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+.js-link {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffa5ba;
+  margin: 10px;
+  color: #fff;
+  border-radius: 3px;
+
+.how-its-made {
+  background-color: #FFF5F6;
+}
+
+.how-its-made__lable {
+  padding-top: 125px;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  color: #FFA5BA;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .how-its-made__lable {
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.17;
+    color: #FFA5BA;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .how-its-made__lable {
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.13;
+    color: #FFA5BA;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+.how-its-made__title {
+  padding-top: 15px;
+  padding-bottom: 25px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.14;
+  color: #D41443;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .how-its-made__title {
+    width: 100%;
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.14;
+    color: #D41443;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .how-its-made__title {
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 1.14;
+    color: #D41443;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-bottom: 55px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .how-its-made__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.how-its-made__image {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .how-its-made__image {
+    width: 340px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .how-its-made__image {
+    width: 516px;
+  }
+}
+
+.how-its-made__box {
+  display: block;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .how-its-made__box {
+    width: 340px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .how-its-made__box {
+    width: 463px;
+  }
+}
+
+.how-its-made__text {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #000000;
+  letter-spacing: 0.04em;
+  padding-top: 46px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .how-its-made__text {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.76;
+    color: #000000;
+    letter-spacing: 0.04em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .how-its-made__text {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #000000;
+    letter-spacing: 0.04em;
+  }
+}
+
+.how-its-made__description {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #907E82;
+  letter-spacing: 0.04em;
+  padding-top: 46px;
+  padding-bottom: 46px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .how-its-made__description {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.76;
+    color: #907E82;
+    letter-spacing: 0.04em;
+    padding-bottom: 62px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .how-its-made__description {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.93;
+    color: #907E82;
+    letter-spacing: 0.04em;
+    padding-top: 35px;
+  }
+}
+
+.how-its-made__button {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.31;
+  padding: 10px 40px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  color: #D41443;
+  border: none;
+  cursor: pointer;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.31;
+  padding: 10px 56px 10px 37px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  color: #D41443;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .how-its-made__button {
+    font-size: 16px;
+  }
+}
+
+.advantages {
+  background-color: #FFF5F6;
+}
+
+.feature {
+  display: block;
+  padding-top: 39px;
+  padding-bottom: 100px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .feature {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .feature {
+    padding-top: 39px;
+  }
+}
+
+.feature__list {
+  margin-bottom: 38px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__list {
+    margin-bottom: 0;
+    margin-right: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .feature__list {
+    margin-right: 30px;
+  }
+}
+
+.feature__list:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__list:last-child {
+    margin-right: 0;
+  }
+}
+
+.feature__figure {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  color: #D41443;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__figure {
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.14;
+    color: #D41443;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .feature__figure {
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 1.14;
+    color: #D41443;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+.feature__text {
+  padding-top: 15px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #000000;
+  letter-spacing: 0.04em;
+  width: 230px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__text {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #000000;
+    letter-spacing: 0.04em;
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .feature__text {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.76;
+    color: #000000;
+    letter-spacing: 0.02em;
+    width: 330px;
+  }
+}
+

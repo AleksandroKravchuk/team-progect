@@ -1,0 +1,64 @@
+
+// Текст для ссылок, кнопок
+@mixin text-link($fw: normal, $fs: 14px, $lx: 1.29, $color: $text-color-white) {
+    font-family: DM Sans;
+    font-style : normal;
+    font-weight    : $fw;
+    font-size      : $fs;
+    line-height    : $lx;
+    color          : $color;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// Основной текст
+@mixin main-text($fw: 400, $fs: 14px, $lx: 1.93, $color: $text-color-white, $ls:0.04) {
+    font-family: DM Sans;
+    font-style : normal;
+    font-weight: $fw;
+    font-size  : $fs;
+    line-height: $lx;
+    color      : $color;
+    letter-spacing: $ls;
+}
+
+// Декоративный цвет (заголовки)
+@mixin secondary-text($fw: 400, $fs: 58px, $lx: 1.14, $color: $text-color-white, $ls:0.06) {
+    font-family   : Titan One;
+    font-style    : normal;
+    font-weight   : $fw;
+    font-size     : $fs;
+    line-height   : $lx;
+    color         : $color;
+    letter-spacing: $ls;
+    text-transform: uppercase;
+}
+
+// Псевдоэлемент. Указать свои размеры и позиционировать марджинами
+@mixin beefore ($img: url(../images/),$wh:30px,$ht:30px, $bz:cover) {
+    content            : "";
+    display            : inline-block;
+    background-image   : $img;
+    width              : $wh;
+    height             : $ht;
+    background-size    : $bz;
+    background-repeat  : no-repeat;
+    background-position: center;
+}
+
+// Кнопка
+@mixin button ($img: url(../images/), $wh:30px, $ht:30px, $bz:cover) {
+display: flex;
+align-items: center;
+font-family: DM Sans;
+font-style : normal;
+font-weight: bold;
+font-size  : 16px;
+line-height: 1.31;
+padding: 12px 30px 12px 40px;
+background: #FFFFFF;
+border-radius: 22px;
+color: #D41443;
+border: none;
+cursor: pointer;
+}
