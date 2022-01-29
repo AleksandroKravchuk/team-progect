@@ -402,4 +402,44 @@ summary {
 .page-header__link:hover, .page-header__link:focus {
   color: #D41443;
 }
+
+.reviews__wrapper {
+  margin: 0 auto;
+  max-width: 280px;
+  position: relative;
+  padding: 43px 50px 20px 50px;
+  background-color: #FAFAFA;
+}
+
+.reviews__label {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+  /* or 31px */
+  text-align: center;
+  color: #000000;
+}
+
+.reviews__label::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -15px;
+  left: 11px;
+  width: 54px;
+  height: 40px;
+  background-image: url("/slick_img/brackets.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.reviews__location {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  /* or 26px */
+  text-align: center;
+  color: #000000;
+}
 /*# sourceMappingURL=main.css.map */
