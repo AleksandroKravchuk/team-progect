@@ -1,375 +1,436 @@
 .header-hero {
-    background-color: $bckg-color-accent;
+  background-color: $bckg-color-accent;
+  padding-top: 6px;
+  padding-bottom: 446px;
+  @media screen and (min-width: 768px) {
     padding-top: 37px;
+    padding-bottom: 34px;
+  }
+  @media screen and (min-width: 1280px) {
     padding-bottom: 56px;
+  }
 }
 .page-header {
-    display: flex;
-    align-items: center;  
-    z-index: 10;  
+  display: flex;
+  align-items: center;
+  z-index: 10;
 }
- .header-hero .container {
-     position: relative;
- }
+.header-hero .container {
+  position: relative;
+}
 .page-header__nav {
-    position: absolute;
-    left: 20%;
-    z-index: 5;
-    display: none;
-    @media screen and (min-width: 1280px) {
-    margin-left: 110px;   
+  position: absolute;
+  left: 20%;
+  z-index: 50;
+  display: none;
+  @media screen and (min-width: 1280px) {
+    margin-left: 110px;
     display: block;
-     } 
+  }
 }
 .page-header__list {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1279px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
 }
-
+.page-header__item {
+  @media screen and (max-width: 1179px) {
+    padding: 11px 0;
+    border-bottom: 1px solid rgb(163, 158, 158);
+    width: 100%;
+  }
+}
 .page-header__item:not(:last-child) {
+  @media screen and (min-width: 1280px) {
     margin-right: 35px;
+  }
 }
 .page-header__button {
-    display: none;
-    @media screen and (min-width: 768px) {
+ display: none;
+  @media screen and (min-width: 768px) {
     display: block;
     margin-left: auto;
-    @include button ();
+    @include button();
     &-icon {
-    margin-left: 12px;}
-    &:hover, 
+      margin-left: 12px;
+    }
+    &:hover,
     &:focus {
-    background: #ECEBEB;}
+      background: #ecebeb;
     }
   }
-.page-header__link {
-    @include text-link ($fw: bold,$fs: 16px,$lx: 1.31,$color: $text-color-white);
-    transition: color 300ms linear;
-    &:hover, 
-    &:focus {
-color: $accent-color;
-    }
 }
-.menu-button-burger {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: 291px;
-     @media screen and (min-width: 1280px) {
-     display    : none;
- }
+.page-header__link {
+  @media screen and (max-width: 1279px) {
+    @include text-link($fw: bold, $fs: 14px, $lx: 1.31, $color: $text-color-white);
+  }
+  @include text-link($fw: bold, $fs: 16px, $lx: 1.31, $color: $text-color-white);
+  transition: color 300ms linear;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 // ГЕРОЙ
 .hero {
-margin-top: 84px; 
-  
+  @media screen and (min-width: 768px) {
+    margin-top: 15px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 84px;
+  }
+}
+.hero__sektion {
+  position: relative;
 }
 .hero__content {
-margin-left: 60px;     
-width:277px;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    z-index: 5;
+    left: 10px;
+    top: 140px;
+  }
+  width: 162px;
+  position: relative;
+  @media screen and (min-width: 1280px) {
+    margin-left: 60px;
+    width: 277px;
+  }
 }
 .hero__name {
-@include secondary-text ($fw: 400,$fs: 38px,$lx: 1.15,$color: $text-color-white,$ls:0.04);
-text-transform: uppercase;
+  text-transform: uppercase;
+  @include secondary-text($fw: 400, $fs: 26px, $lx: 1.15, $color: $text-color-white, $ls: 0.04);
+  @media screen and (min-width: 768px) {
+    @include secondary-text($fw: 400, $fs: 22px, $lx: 1.15, $color: $text-color-white, $ls: 0.04);
+  }
 
+  @media screen and (min-width: 1280px) {
+    @include secondary-text($fw: 400, $fs: 38px, $lx: 1.15, $color: $text-color-white, $ls: 0.04);
+  }
 }
 .hero__name-accent {
-@include secondary-text ($fs: 58px,$color: $accent-color);
+  @include secondary-text($fs: 42px, $color: $accent-color);
+  @media screen and (min-width: 768px) {
+    @include secondary-text($fs: 34px, $color: $accent-color);
+  }
+  @media screen and (min-width: 1280px) {
+    @include secondary-text($fs: 58px, $color: $accent-color);
+  }
 }
 
 .hero__list {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 1280px) {
     margin-top: 25px;
-    display: flex;
-    align-items: center;
+  }
 }
 .hero__item:not(:last-child) {
+  margin-right: 8px;
+  @media screen and (min-width: 1280px) {
     margin-right: 17px;
+  }
 }
 .hero__link-products {
-@include text-link (); 
-display: block;
-padding: 9px 18px;
-background-color: $accent-color;
-border-radius: 20px;
- &:hover,
- &:focus {
-     background-color: #C7133E;
- }
+  @include text-link($fs: 8px, $lx: 1.25);
+  display: block;
+  padding: 7px 12px;
+  background-color: $accent-color;
+  border-radius: 20px;
+  @media screen and (min-width: 1280px) {
+    @include text-link();
+    padding: 9px 18px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+  }
 }
 .hero__link-how {
-@include text-link ($color: $accent-color); 
-display: block; 
-padding: 9px 18px;
-background-color: $text-color-white;
-border-radius: 20px;
-&:hover,
-&:focus {
-    background-color: #ECEBEB;;
-}
+  @include text-link($fs: 8px, $lx: 1.25, $color: $accent-color);
+  display: block;
+  padding: 7px 12px;
+  background-color: $text-color-white;
+  border-radius: 20px;
+  @media screen and (min-width: 1280px) {
+    @include text-link($color: $accent-color);
+    padding: 9px 18px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
 }
 .hero__text-box {
- width: 200px;   
- margin-top: 112px;
-margin-left: 240px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 114px;
+    margin-top: 66px;
+    margin-left: 140px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    margin-top: 112px;
+    margin-left: 240px;
+  }
 }
 .hero__text {
-    @include main-text ($lx: 1.43)
+  @include main-text($fw: 400, $fs: 8px, $lx: 1.5, $color: $text-color-white, $ls: 0.04);
+  @media screen and (min-width: 1280px) {
+    @include main-text($lx: 1.43);
+  }
 }
 .hero__button {
-    width: 26px;
-    height: 26px;
-    background-color: $text-color-white;
-    fill: $accent-color;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
+  width: 26px;
+  height: 26px;
+  background-color: $text-color-white;
+  fill: $accent-color;
+  border: none;
+  border-radius: 50%;
+  margin-top: 7px;
+  cursor: pointer;
+  @media screen and (min-width: 1280px) {
     margin-top: 20px;
-    &:hover,
-    &:focus {
-    background-color: #ECEBEB;
-    fill: #C7133E;
-}
+  }
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    fill: #c7133e;
+  }
 }
 
 // Квадратики с цифрами справа
 .hero__sektion {
-    display: flex;
+  display: flex;
 }
 .hero__card-box {
-  
-    margin-left: auto;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  margin-left: auto;
 }
 .hero__card-first {
-margin-left: auto;
-display: flex;
-position: relative;
-width: 72px;
-height: 77px;
-justify-content: flex-end;
-margin-bottom: 18px;
+  margin-left: auto;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  width: 43px;
+  height: 44px;
+  margin-bottom: 14px;
+  @media screen and (min-width: 1280px) {
+    width: 72px;
+    height: 77px;
+    margin-bottom: 18px;
+  }
 }
 .hero__card-second {
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 51px;
+  height: 43px;
+  @media screen and (min-width: 1280px) {
     width: 92px;
     height: 76px;
-    justify-content: flex-end;  
+  }
 }
 
 .hero__card-text {
-    @include main-text ($lx: 1.28);
+  @include main-text($fs: 8px, $lx: 1.25);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  &::before {
+    @include secondary-text($fw: 400, $fs: 28px, $lx: 1.14, $color: $accent-color, $ls: 0.04);
+    content: '16';
     position: absolute;
+    top: -32px;
     right: 0;
-    bottom: 0;
-      &::before {
-       @include secondary-text ($fw: 400, $fs: 46px, $lx: 1.15, $color: $accent-color, $ls: 0.04);   
-      content         : "16";
-      position        : absolute;
-      top             : -52px;
-      right           : 0;
-      z-index         : 5;
+    z-index: 5;
   }
-    &::after {
-        content: "";
-        position: absolute;
-        top: -60px;
-        right: -18px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: $text-color-white;
-        z-index: 1;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -35px;
+    right: -10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $text-color-white;
+  }
+  @media screen and (min-width: 1280px) {
+    @include main-text($lx: 1.28);
+    &::before {
+      @include secondary-text($fs: 46px, $lx: 1.15, $color: $accent-color);
+      top: -52px;
     }
+    &::after {
+      width: 30px;
+      height: 30px;
+      top: -60px;
+    }
+  }
 }
 .hero__card-text1 {
-    @include main-text ($lx: 1.28);
-    position               : absolute;
-    right                  : 0;
-    bottom                 : 0;
+  @include main-text($fs: 8px, $lx: 1.25);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  &::before {
+    @include secondary-text($fs: 28px, $lx: 1.14, $color: $accent-color);
+    content: '23';
+    position: absolute;
+    top: -32px;
+    right: 0;
+    z-index: 5;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -35px;
+    right: -10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $text-color-white;
+  }
+  @media screen and (min-width: 1280px) {
+    @include main-text($lx: 1.28);
     &::before {
-        @include secondary-text ($fw: 400, $fs: 46px, $lx: 1.15, $color: $accent-color, $ls: 0.04);
-        content                     : "23";
-        position                    : absolute;
-        top                         : -52px;
-        right                       : 0;
-        z-index                     : 5;}
-    &::after {
-        content         : "";
-        position        : absolute;
-        top             : -60px;
-        right           : -18px;
-        width           : 30px;
-        height          : 30px;
-        border-radius   : 50%;
-        background-color: $text-color-white;
-        z-index         : 1;
+      @include secondary-text($fs: 46px, $lx: 1.15, $color: $accent-color);
+      top: -52px;
     }
+    &::after {
+      width: 30px;
+      height: 30px;
+      top: -60px;
+    }
+  }
 }
 // Фотографии
 .hero__kolo {
-    position: absolute;
-    top: 2%;
-    left: 40%;
-    animation-name           : kolo;
-    animation-duration       : 2s;
-    animation-timing-function: cubic-bezier(.1, -.6, .2, 0);
-@keyframes kolo {
+  @media screen and (max-width: 767px) {
+    width: 346px;
+    top: 150%;
+    left: 12%;
+  }
+  position: absolute;
+  top: 1%;
+  left: 40%;
+  width: 324px;
+  animation-name: kolo;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  @keyframes kolo {
     0% {
-    opacity: 0;}
+      opacity: 0;
+    }
     100% {
-    opacity: 1;}
-}}
+      opacity: 1;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    left: 40%;
+    width: 538px;
+    top: 2%;
+  }
+}
 
 .hero__milk {
-position: absolute;
-top: 70%;
-left: 5%;
-animation-name           : milk;
-animation-duration       : 2s;
-animation-timing-function: cubic-bezier(.1, -.6, .2, 0);
-@keyframes milk {
-0% {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 68%;
+    left: 0;
+    width: 124px;
+    animation-name: milk;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    @keyframes milk {
+      0% {
         transform: translateX(-50%);
-        opacity  : 0;}
-100% {
-        opacity  : 1;
-        transform: translateX(0)}
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 5%;
+    width: 188px;
+    top: 70%;
+  }
 }
-}
+
 .hero__girl {
-position: absolute;
- top     : 70%;
- right: 0;
- animation-name           : girl;
-animation-duration       : 2s;
-animation-timing-function: cubic-bezier(.1, -.6, .2, 0);
-@keyframes girl {
-    0% {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    width: 168px;
+    animation-name: girl;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    @keyframes girl {
+      0% {
         transform: translateX(50%);
-        opacity  : 0;}
-    100% {
-        opacity  : 1;
-        transform: translateX(0)}
-}
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    width: 293px;
+    top: 70%;
+    right: 0;
+  }
 }
 .hero__ice {
-position: absolute;
-top     : 14%;
-right   : 28%;
-animation-name           : ice;
-animation-duration       : 2s;
-animation-timing-function: cubic-bezier(.1, -.6, .2, 0);
- @keyframes ice {
-     0% {
-         transform: translateY(50%);
-         opacity  : 0; }
-     100% {
-         opacity  : 1;
-         transform: translateY(0)}
- }
+  @media screen and (max-width: 767px) {
+    width: 171px;
+    top: 180%;
+    left: 30%;
+  }
+  position: absolute;
+  top: 12%;
+  right: 28%;
+  width: 143px;
+  animation-name: ice;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  @keyframes ice {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    width: 236px;
+    top: 14%;
+    right: 28%;
+  }
 }
-// .page-header__nav {
-//         @media screen and (max-width: 767px) {
-// display : block;
-//  position: absolute;
-//  top     : 70px;
-//  left    : 0;
-//  height  : 100vh;
-//  width   : 80%;
-// background-image: linear-gradient(to right, #FFFFFF, #D64374);
-// transform: translateX(-100%);
-// opacity: 0;
-// transition: transform 300ms linear, opacity 300ms linear;
-
-// }
-// }
-// .page-header__nav.is-open{
-//     @media screen and (max-width: 767px) {
-//     z-index: 3;
-//     transform: translateX(0);
-//     opacity: 1;
-// }
-// }
-// .page-header__list {  
-
-//     @media screen and (max-width: 767px) { 
-// padding: 30px;
-// height: 100%;   
-// }
-
-//     @media screen and (min-width: 768px) {   
-// display : flex;       
-// flex-direction: row;
-// align-items: center;
-// margin-left: 100px;
-// }
-//     @media screen and (min-width: 1120px) {
-//     margin-left: 266px}
-
-// }
-// .page-header__item:not(:last-child){
-//       @media screen and (min-width: 768px) {
-//     margin-right: 40px;
-//   }
-
-// } 
-// .page-header__link {
-//     @media screen and (max-width: 767px) {
-//     @include text ($fw: 500,$fs:16px, $lx:1.14, $color:$header-color, $opa:0.8);
-//     padding: 20px 0px;
-//     display: flex;
-//     align-items: center;
-//     border-bottom: 1px solid #DCDCDC;
-//     &::before {
-//       @include mobile ($bi:url(../images/ice-kream/icons1.png)) 
-//     }
-// }
-    
-//     @media screen and (min-width: 768px) {
-//     @include text ($fs:14px, $lx:1.14, $color:$header-color, $opa:0.6);
-// }
-// @include text ($fs:14px,$lx:1.14,$color:$header-color,$opa:0.6);
-// transition:all 300ms linear;
-// &:hover,
-// &:focus {
-// color: $accent-color;
-// font-weight: bold;
-// font-size  : 15px;
-// line-height: 1.2;
-// fill: $footer-text-color;
-// }
-// }
-// .page-header__link[href="#product"] {
-//     @media screen and (max-width: 767px) {
-//         &::before {
-//             @include mobile ($bi:url(../images/ice-kream/icons2.png))
-//         }
-//     }
-// }
-// .page-header__link[href="#pricing"]{
-// @media screen and (max-width: 767px) {
-//     &::before {
-//         @include mobile ($bi:url(../images/ice-kream/icons3.png))
-//     }
-// }
-// }
-// .page-header__link[href="#contakt"] {
-//     @media screen and (max-width: 767px) {
-//         &::before {
-//             @include mobile ($bi:url(../images/ice-kream/icons2.png))
-//         }
-//     }
-// }
-// .page-header__icon {
-// margin-left: auto;
-//     @media screen and (min-width: 768px) {
-//         display: none;
-//     }
-// }
-// .page-header__button {
-// @extend .button;
-// margin-left: auto;
-// @media screen and (max-width: 1119px) {
-//     display: none;}
-// }

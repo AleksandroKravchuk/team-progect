@@ -2,9 +2,13 @@
 <header class="header-hero">
     <div class="container">
         <section class="page-header">
-        
            <img src="images/logo1.svg" alt="logo" width="199" height="50">
         <nav class="page-header__nav " data-menu>
+             <button type="button" class="menu-button" aria-expanded="false" data-menu-close>
+                    <svg width="14" height="14" aria-label="кнопка закоытия мобильного меню">
+                        <use class="menu-button__icon--menu" href="./images/symbol-defs.svg#icon-close"></use>
+                    </svg>
+            </button>
             <ul class="page-header__list">
                 <li class="page-header__item">
                     <a class="page-header__link" href="#home">Home</a>
@@ -17,24 +21,21 @@
                     </a></li>
                 <li class="page-header__item"><a class="page-header__link" href="#contakt">Contact
                     </a></li>
-                    </ul>
+                    </ul>    
         </nav>
-        <button type="button" class="menu-button-burger is-open" data-menu-close>
+        <button type="button" class="menu-button-burger" data-menu-button>
                 <svg width="20" height="12" aria-label="Переключатель мобильного меню">
                     <use class="menu-button__icon--cross" href="images/symbol-defs.svg#icon-Burger" >
                     </use>
                 </svg>
         </button>
+        
         <button class="page-header__button" type="button" data-modal-open>Buy Now 
             <svg class="page-header__button-icon" width="4" height="8" aria-label="Buy now">
                 <use class="menu-button__icon--menu" href="images/symbol-defs.svg#icon-right-2"></use>
             </svg>
         </button>
-        <!-- <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                <use class="menu-button__icon--menu" href="./images/symbol-defs.svg#menu2"></use>
-            </svg>
-        </button> -->
+       
     </section>
     <section class="hero">
         <div class="hero__sektion">
@@ -86,7 +87,7 @@
     <picture>
         <source srcset="
                 images/hero/icewebp.webp 236w, 
-                images/hero/ice2xwebp.webp 586w" type="image/webp" sizes="472vw">
+                images/hero/ice2xwebp.webp 586w" type="image/webp" sizes="236vw">
         <img class="hero__ice" srcset="
                 images/hero/ice.png 1x,
                 images/hero/ice2x.png 2x" src="./images/hero/ice.png" alt="Молоко" width="236">
