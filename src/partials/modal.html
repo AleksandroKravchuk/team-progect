@@ -4,8 +4,9 @@
 
 <a href="#" class="js-link js-open-modal" data-modal="buy">Открыть окно buy</a>
 <a href="#" class="js-link js-open-modal" data-modal="eco">Открыть окно eco</a>
-<a href="#" class="js-link js-open-modal" data-modal="locations">Открыть окно locations</a>
-<a href="#" class="js-link js-open-modal" data-modal="franchise">Открыть окно franchise</a>
+<a href="#" class="js-link js-open-modal" data-modal="locations">locations</a>
+<a href="#" class="js-link js-open-modal" data-modal="franchise">franchise</a>
+<a href="#" class="js-link js-open-modal" data-modal="watch">Better to watch</a>
 
 
 
@@ -17,20 +18,49 @@
    <p class="modal__title">Заголовок окна buy</p>
 </div>
 
-<div class="modal" data-modal="eco">
+<div class="modal modal--eco" data-modal="eco">
    <!--   Svg иконка для закрытия окна  -->
    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-   <p class="modal__title">Заголовок окна eco</p>
+   <p class="modal__title">Only fresh Alpine milk</p>
+   <div class="modal__scene">
+    <div class="modal__sun"></div>
+    <div class="modal__hills"></div>
+    <div class="modal__plane"></div>
+    <div class="modal__clouds"></div>
 </div>
-<div class="modal" data-modal="locations">
+</div>
+<div class="modal modal--locations" data-modal="locations">
    <!--   Svg иконка для закрытия окна  -->
    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-   <p class="modal__title">Заголовок окна locations</p>
+   <p class="modal__title">Main Office, Los Angeles, Long Beach</p>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423283.43554989767!2d-118.69191546801642!3d34.02073049790668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1643372912557!5m2!1sru!2sua" width=100% height=95% style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 <div class="modal" data-modal="franchise">
   <!--   Svg иконка для закрытия окна  -->
   <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-  <p class="modal__title">Заголовок окна franchise</p>
+  <p class="modal__title">franchise</p>
+</div>
+<div class="modal modal--watch" data-modal="watch">
+  <!--   Svg иконка для закрытия окна  -->
+  <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+  <p class="modal__title">Better to watch</p>
+  <div class="modal__container">
+
+     <ul class="modal-watch">
+      <li class="modal-watch__item">
+            <img src="images/modal1.gif" alt="icecream"/>
+       </li>
+      <li class="modal-watch__item">
+            <img src="images/modal2.gif" alt="icecream"/>
+      </li>
+      <li class="modal-watch__item">
+            <img src="images/modal3.gif" alt="icecream"/>
+      </li>
+      <li class="modal-watch__item">
+             <img src="images/modal4.gif" alt="icecream"/>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <!-- Подложка под модальным окном -->
