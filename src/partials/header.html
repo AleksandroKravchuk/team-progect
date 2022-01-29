@@ -1,55 +1,96 @@
 
 <header class="header-hero">
+    <div class="container">
         <section class="page-header">
-        <div class="container">
-           <img src="images/logo7.svg" alt="logo" width="199" height="50">
+           <img src="images/logo1.svg" alt="logo" width="199" height="50">
         <nav class="page-header__nav " data-menu>
-            <!-- <button type="button" class="menu-button-1 is-open" data-menu-close> -->
-                <!-- <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                    <use class="menu-button__icon--cross" href="./images/symbol-defs.svg#icon-arrow-left" width="20">
-                    </use>
-                </svg> -->
+             <button type="button" class="menu-button" aria-expanded="false" data-menu-close>
+                    <svg width="14" height="14" aria-label="кнопка закоытия мобильного меню">
+                        <use class="menu-button__icon--menu" href="./images/symbol-defs.svg#icon-close"></use>
+                    </svg>
             </button>
             <ul class="page-header__list">
                 <li class="page-header__item">
-                    <a class="page-header__link" href="#home">Home
-                        <!-- <svg class="page-header__icon" width="27" height="27">
-                            <use href="./images/symbol-defs.svg#icon-point-right"></use>
-                        </svg> -->
-                    </a>
+                    <a class="page-header__link" href="#home">Home</a>
                 </li>
                 <li class="page-header__item"><a class="page-header__link" href="#about-us">About us
-                        <!-- <svg class="page-header__icon" width="27" height="27">
-                            <use href="./images/symbol-defs.svg#icon-point-right"></use>
-                        </svg> -->
                     </a></li>
                 <li class="page-header__item"><a class="page-header__link" href="#how-its-made">How it’s made?
-                        <!-- <svg class="page-header__icon" width="27" height="27">
-                            <use href="./images/symbol-defs.svg#icon-point-right"></use>
-                        </svg> -->
                     </a></li>
                 <li class="page-header__item"><a class="page-header__link" href="#our-products">Our products
-                        <!-- <svg class="page-header__icon" width="27" height="27">
-                            <use href="./images/symbol-defs.svg#icon-point-right"></use>
-                        </svg> -->
                     </a></li>
                 <li class="page-header__item"><a class="page-header__link" href="#contakt">Contact
-                        <!-- <svg class="page-header__icon" width="27" height="27">
-                            <use href="./images/symbol-defs.svg#icon-point-right"></use>
-                        </svg> -->
                     </a></li>
-            </ul>
+                    </ul>    
         </nav>
-        <button class="page-header__button" type="button" data-modal-open>Buy Now</button>
-        <!-- <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                <use class="menu-button__icon--menu" href="./images/symbol-defs.svg#menu2"></use>
+        <button type="button" class="menu-button-burger" data-menu-button>
+                <svg width="20" height="12" aria-label="Переключатель мобильного меню">
+                    <use class="menu-button__icon--cross" href="images/symbol-defs.svg#icon-Burger" >
+                    </use>
+                </svg>
+        </button>
+        
+        <button class="page-header__button" type="button" data-modal-open>Buy Now 
+            <svg class="page-header__button-icon" width="4" height="8" aria-label="Buy now">
+                <use class="menu-button__icon--menu" href="images/symbol-defs.svg#icon-right-2"></use>
             </svg>
-        </button> -->
-       </div> 
+        </button>
+       
     </section>
     <section class="hero">
-
+        <div class="hero__sektion">
+        <div class="hero__content">
+         <h1 class="hero__name">ice cream made with <span class="hero__name-accent">passion</span></h1> 
+         
+            <ul class="hero__list">
+                <li class="hero__item"><a class="hero__link-products" href="#our-products">Products</a></li>
+                <li class="hero__item"><a class="hero__link-how" href="#how-its-made">How it’s made?</a></li>
+            </ul></div>
+            <div class="hero__card-box">
+                <ul class="hero__card-list">
+                    <li class="hero__card-first"><p class="hero__card-text">cafes</p></li>
+                    <li class="hero__card-second"><p class="hero__card-text1">food trucks</p></li>
+                </ul>
+            </div></div>
+            <div class="hero__text-box">
+            <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <button class="hero__button" type="button">
+            <svg class="hero__buttonn-icon" width="10" height="10" >
+                <use  href="images/symbol-defs.svg#icon-arrow-right2"></use>
+            </svg>
+        </button></div>
     </section>
-    
+    <picture>
+        <source srcset="
+            images/hero/kolowebp.webp 370w, 
+            images/hero/kolo2xwebp.webp 1076w" type="image/webp" sizes="538vw">
+        <img class="hero__kolo" srcset="
+            images/hero/ellipse.png 1x,
+            images/hero/ellipse2x.png 2x" src="./images/hero/ellipse.png" alt="Круг" width="538">   
+    </picture> 
+     <picture>
+        <source srcset="
+            images/hero/milkwebp.webp 188w, 
+            images/hero/milk2xwebp.webp 376w" type="image/webp" sizes="188vw">
+        <img class="hero__milk" srcset="
+            images/hero/milk.png 1x,
+            images/hero/milk2x.png 2x" src="./images/hero/milk.png" alt="Молоко" width="188">
+    </picture>
+<picture>
+    <source srcset="
+            images/hero/girlwebp.webp 293w, 
+            images/hero/girl2xwebp.webp 586w" type="image/webp" sizes="293vw">
+    <img class="hero__girl" srcset="
+            images/hero/girl.png 1x,
+            images/hero/girl2x.png 2x" src="./images/hero/girl.png" alt="Молоко" width="293">
+</picture>
+    <picture>
+        <source srcset="
+                images/hero/icewebp.webp 236w, 
+                images/hero/ice2xwebp.webp 586w" type="image/webp" sizes="236vw">
+        <img class="hero__ice" srcset="
+                images/hero/ice.png 1x,
+                images/hero/ice2x.png 2x" src="./images/hero/ice.png" alt="Молоко" width="236">
+    </picture>
+    </div>
 </header>
