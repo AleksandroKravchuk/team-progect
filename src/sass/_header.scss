@@ -138,7 +138,7 @@
   }
 }
 .hero__link-products {
-  @include text-link($fs: 8px, $lx: 1.25);
+  @include text-link($fs: 14px, $lx: 1.25);
   display: block;
   padding: 7px 12px;
   background-color: $accent-color;
