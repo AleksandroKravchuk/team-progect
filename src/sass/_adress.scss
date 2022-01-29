@@ -165,9 +165,26 @@
   color: #907e82;
   padding-bottom: 25px;
   border-bottom: 1px solid #e1e1e1;
+  @media screen and(min-width: 768px) {
+    padding-bottom: 30px;
+    font-size: 14px;
+    line-height: 166%;
+  }
+  @media screen and(min-width: 1080px) {
+    padding-bottom: 32px;
+    font-size: 16px;
+  }
 }
 .contacts-center {
   margin-bottom: 25px;
+  @media screen and(min-width: 768px) {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and(min-width: 1080px) {
+    margin-bottom: 32px;
+  }
 }
 .contacts-center__time {
   font-family: DM Sans;
@@ -180,6 +197,13 @@
   margin-top: 10px;
   &:first-child {
     margin-top: 0;
+  }
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and(min-width: 1080px) {
+    margin-bottom: 0px;
+    font-size: 16px;
   }
 }
 .contacts-center__time--pink {
@@ -195,6 +219,18 @@
   &:last-child {
     padding-bottom: 25px;
     border-bottom: 1px solid #e1e1e1;
+    @media screen and(min-width: 1080px) {
+      padding-bottom: 30px;
+    }
+    @media screen and(min-width: 768px) {
+      padding-bottom: 32px;
+    }
+  }
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and(min-width: 1080px) {
+    font-size: 16px;
   }
 }
 .contacts-bot__tel {
@@ -204,6 +240,13 @@
   font-size: 12px;
   line-height: 18px;
   color: #907e82;
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+    line-height: 183%;
+  }
+  @media screen and(min-width: 1080px) {
+    font-size: 16px;
+  }
 }
 .contacts-bot__mail {
   font-family: DM Sans;
