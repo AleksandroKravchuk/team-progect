@@ -403,8 +403,7 @@ summary {
   color: #D41443;
 }
 
-.how-its-made,
-.advantages {
+.how-its-made {
   background-color: #FFF5F6;
 }
 
@@ -646,6 +645,10 @@ summary {
   }
 }
 
+.advantages {
+  background-color: #FFF5F6;
+}
+
 .feature {
   display: block;
   padding-top: 39px;
@@ -733,23 +736,6 @@ summary {
     color: #D41443;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-  }
-}
-
-.feature__list::before {
-  content: '';
-  width: 33px;
-  height: 50px;
-  margin-top: 16px;
-  background-image: url(../images/icon1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-}
-
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .feature__list::before {
-    background-image: url(../images/icon1@2x.png);
   }
 }
 
