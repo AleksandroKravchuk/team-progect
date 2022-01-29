@@ -1,7 +1,82 @@
-.Gallery__photo {
-  background-image: url(../images/gallery-section/gallery-bck.jpg);
+.gallery {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-size: cover;
+  background-image: linear-gradient(#fff5f6 50%, #ffffff 50%);
+
   @media screen and (min-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 60px;
   }
   @media screen and (min-width: 1280px) {
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -3px;
+    @media screen and (min-width: 768px) {
+      margin: -5px;
+    }
+    @media screen and (min-width: 1280px) {
+    }
+  }
+  &__grid-a,
+  &__grid-b,
+  &__grid-c,
+  &__grid-d,
+  &__grid-e,
+  &__grid-f {
+    margin: 3px;
+    @media screen and (min-width: 768px) {
+      margin: 5px;
+    }
+    @media screen and (min-width: 1280px) {
+    }
+  }
+  &__grid-a,
+  &__grid-b,
+  &__grid-c,
+  &__grid-d,
+  &__grid-e,
+  &__grid-f:not(:last-child) {
+    margin: 3px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 3px;
+    }
+    @media screen and (min-width: 1280px) {
+    }
+  }
+  &__photo {
+    max-width: 35px;
+    border-radius: 5px;
+    @media screen and (min-width: 768px) {
+      max-width: 80px;
+      border-radius: 10px;
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: 120px;
+      border-radius: 15px;
+    }
+  }
+  &__photo:not(:last-child) {
+    margin-bottom: 3px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 6px;
+    }
+    @media screen and (min-width: 1280px) {
+    }
+  }
+  &__photo--big {
+    max-width: 80px;
+    max-height: 80px;
+    @media screen and (min-width: 768px) {
+      max-width: 150px;
+      max-height: 150px;
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: 200px;
+      max-height: 200px;
+    }
   }
 }
