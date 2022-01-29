@@ -139,15 +139,12 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin: -15px;
       padding: 3px;
     }
     .modal-watch__item {
-      display: flex;
-      flex-basis: calc(100% / 2)-50px;
-      justify-content: center;
-      margin-right: 30px;
-      text-align: center;
-      padding: 3px;
+      flex-basis: calc(100% -2 * 30px) / 2;
+      margin: 15px;
     }
     .modal-watch__item:last-child {
       margin: 0;
