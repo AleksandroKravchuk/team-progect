@@ -1,0 +1,25 @@
+.reviews__wrapper {
+    margin: 0 auto;
+    max-width: 400px;
+    position: relative;
+    padding: 43px 50px 20px 50px;
+    background-color: #FAFAFA;
+}
+
+.reviews__label {
+
+    &::before {
+
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 10px;
+        background-image: url(../images/slider/brackets@1x.jpg);
+        width: 54px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    
+        z-index: -1;
+    }
+}
