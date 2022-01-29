@@ -25,7 +25,7 @@
   /*  Установаем ширину окна  */
   width: 100%;
   // max-width: 500px;
-  height: 80%;
+  height: 80vh;
   &--eco {
     /* Scene styles here */
     .modal__scene {
@@ -139,11 +139,15 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding: 3px;
     }
     .modal-watch__item {
-      // flex-basis: calc(100% / 2)-30px;
+      display: flex;
+      flex-basis: calc(100% / 2)-50px;
+      justify-content: center;
       margin-right: 30px;
       text-align: center;
+      padding: 3px;
     }
     .modal-watch__item:last-child {
       margin: 0;
@@ -160,10 +164,10 @@
   // }
   @media screen and (min-width: 768px) {
     width: 720px;
+    font-size: 22px;
+    line-height: 1.13;
     &--locations {
       height: 540px;
-      font-size: 22px;
-      line-height: 1.13;
       padding: 10px 15px;
     }
     &--eco {
@@ -173,10 +177,10 @@
   }
   @media screen and (min-width: 1280px) {
     width: 1080px;
+    font-size: 24px;
+    line-height: 1.13;
     &--locations {
       height: 810px;
-      font-size: 24px;
-      line-height: 1.13;
       padding: 15px 30px;
     }
     &--eco {
