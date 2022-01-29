@@ -64,6 +64,23 @@ transition: transform 300ms linear, opacity 300ms linear;
         
     }
 }
+.page-header__button-mobile {
+@include button();
+margin-top: 40px;
+width: 100%;
+justify-content: center;
+&-icon {
+    margin-left: 12px;
+}
+&:hover,
+&:focus {
+    background: #ecebeb;
+}
+
+    @media screen and (min-width: 1280px)  {
+display: none;
+}
+}
 // .page-header__list {  
 
 //     @media screen and (max-width: 767px) { 

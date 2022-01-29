@@ -50,11 +50,8 @@
   }
 }
 .page-header__button {
- display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
-    margin-left: auto;
-    @include button();
+ 
+  @include button();
     &-icon {
       margin-left: 12px;
     }
@@ -62,6 +59,13 @@
     &:focus {
       background: #ecebeb;
     }
+  @media screen and (max-width: 767px) {
+display: none;
+ }
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+   
   }
 }
 .page-header__link {
@@ -138,7 +142,7 @@
   }
 }
 .hero__link-products {
-  @include text-link($fs: 14px, $lx: 1.25);
+  @include text-link($fs: 8px, $lx: 1.25);
   display: block;
   padding: 7px 12px;
   background-color: $accent-color;
