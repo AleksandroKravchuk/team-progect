@@ -1,11 +1,12 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  font-family: 'Titan One', cursive;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Titan One', cursive;
 }
 
 h1,
@@ -352,9 +353,17 @@ summary {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
+}
+
+.header-hero .container {
+  position: relative;
 }
 
 .page-header__nav {
+  position: absolute;
+  left: 20%;
+  z-index: 5;
   display: none;
 }
 
@@ -594,31 +603,6 @@ summary {
           justify-content: flex-end;
 }
 
-.hero__card-numb {
-  position: absolute;
-  z-index: 20;
-  font-family: Titan One;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 46px;
-  line-height: 1.15;
-  color: #D41443;
-  letter-spacing: 0.04;
-  text-transform: uppercase;
-}
-
-.hero__card-numb::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  right: -18px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  z-index: 1;
-}
-
 .hero__card-text {
   font-family: DM Sans;
   font-style: normal;
@@ -630,5 +614,312 @@ summary {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.hero__card-text::before {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 1.15;
+  color: #D41443;
+  letter-spacing: 0.04;
+  text-transform: uppercase;
+  content: "16";
+  position: absolute;
+  top: -52px;
+  right: 0;
+  z-index: 5;
+}
+
+.hero__card-text::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+
+.hero__card-text1 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  color: #FFFFFF;
+  letter-spacing: 0.04;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.hero__card-text1::before {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 1.15;
+  color: #D41443;
+  letter-spacing: 0.04;
+  text-transform: uppercase;
+  content: "23";
+  position: absolute;
+  top: -52px;
+  right: 0;
+  z-index: 5;
+}
+
+.hero__card-text1::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+
+.hero__kolo {
+  position: absolute;
+  top: 2%;
+  left: 40%;
+  -webkit-animation-name: kolo;
+          animation-name: kolo;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+@-webkit-keyframes kolo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes kolo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero__milk {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  -webkit-animation-name: milk;
+          animation-name: milk;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+@-webkit-keyframes milk {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes milk {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.hero__girl {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  -webkit-animation-name: girl;
+          animation-name: girl;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+@-webkit-keyframes girl {
+  0% {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes girl {
+  0% {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.hero__ice {
+  position: absolute;
+  top: 14%;
+  right: 28%;
+  -webkit-animation-name: ice;
+          animation-name: ice;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+@-webkit-keyframes ice {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes ice {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.Gallery__photo {
+  background-image: url(../images/gallery-section/gallery-bck.jpg);
+}
+
+/* Стили для подложки */
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 184, 202, 0.5);
+  z-index: 20;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+  /*  Установаем ширину окна  */
+  width: 100%;
+  height: 80%;
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 30;
+  /* Должен быть выше чем у подложки*/
+  /*  Побочные стили   */
+  -webkit-box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal {
+    width: 1080px;
+  }
+}
+
+/* Стили для активных классов подложки и окна */
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #ffa5ba;
+  cursor: pointer;
+}
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+.js-link {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffa5ba;
+  margin: 10px;
+  color: #fff;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=main.css.map */
