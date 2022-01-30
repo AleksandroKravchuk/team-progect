@@ -12,7 +12,7 @@
   height: 100%;
   background-color: rgba(255, 184, 202, 0.5);
   z-index: 20;
-  transition: 0.3s all;
+  transition: all 0.8s ease 0s;
 }
 
 /* Стили для модальных окон */
@@ -26,6 +26,10 @@
   width: 100%;
   // max-width: 500px;
   height: 80vh;
+  position: relative;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
   &--eco {
     /* Scene styles here */
     .modal__scene {
@@ -136,6 +140,34 @@
       /* outline: 1px solid gold; */
       padding: 40px;
       // overflow-y: scroll;
+      .franchise__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #d41342;
+        border-radius: 22px;
+        padding-left: 17px;
+        height: 44px;
+        color: #ffffff;
+        border: none;
+        // outline: none;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-left: 10px;
+        width: 183px;
+        margin: 25px auto 0 auto;
+        &:hover,
+        &:focus {
+          background: #c7133e;
+        }
+      }
     }
     .franchise__title {
       font-weight: bold;
@@ -153,19 +185,19 @@
       font-size: 12px;
       line-height: calc(14 / 12);
       letter-spacing: 0.01em;
-      color: #757575;
+      color: #e18298;
       margin-bottom: 4px;
     }
 
     .franchise__input {
-      border-color: 1px solid rgba(33, 33, 33, 0.2);
-      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-color: 1px solid #e18298;
+      border: 1px solid #e18298;
       box-sizing: border-box;
       border-radius: 4px;
       font-size: 14px;
       line-height: calc(16 / 14);
       letter-spacing: 0.01em;
-      color: #757575;
+      color: #e18298;
       padding-left: 42px;
       padding-top: 11px;
       padding-bottom: 11px;
@@ -175,11 +207,11 @@
     }
     .form__input:hover,
     .form__input:focus {
-      border-color: var(--accent-color);
-      outline: var(--accent-color);
-      fill: var(--accent-color);
+      border-color: #d41443;
+      outline: #d41443;
+      fill: #d41443;
       transition-property: border-color, fill;
-      transition-duration: 250ms;
+      transition-duration: 300ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -188,10 +220,34 @@
 
     .franchise__input:focus,
     .franchise__input:hover {
-      fill: var(--accent-color);
+      fill: #d41443;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
+    }
+    width: 290px;
+    height: auto;
+    padding: 5px;
+    .modal-franchise {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: -3px;
+    }
+    .modal-franchise__item {
+      flex-basis: calc(100% -2 * 6px) / 2;
+      margin: 3px;
+    }
+    .modal-franchise__thumb {
+      width: 130px;
+      height: 80px;
+    }
+    .modal-franchise__thumb > .modal-franchise__img {
+      display: block;
+      height: 100%;
+      width: 100%;
     }
   }
   &--watch {
@@ -205,6 +261,7 @@
       flex-wrap: wrap;
       justify-content: center;
       margin: -3px;
+      position: relative;
     }
     .modal-watch__item {
       flex-basis: calc(100% -2 * 6px) / 2;
@@ -259,6 +316,21 @@
       font-size: 22px;
       line-height: 1.13;
     }
+    &--franchise {
+      width: 700px;
+      padding: 20px;
+      .modal-franchise {
+        margin: -10px;
+      }
+      .modal-franchise__item {
+        flex-basis: calc(100% -2 * 20px) / 2;
+        margin: 10px;
+      }
+      .modal-franchise__thumb {
+        width: 280px;
+        height: 173px;
+      }
+    }
     &--watch {
       width: 700px;
       padding: 20px;
@@ -303,6 +375,21 @@
         height: 22%;
       }
     }
+    &--franchise {
+      width: 1000px;
+      padding: 30px;
+      .modal-franchise {
+        margin: -15px;
+      }
+      .modal-franchise__item {
+        flex-basis: calc(100% -2 * 30px) / 2;
+        margin: 15px;
+      }
+      .modal-franchise__thumb {
+        width: 427px;
+        height: 265px;
+      }
+    }
     &--watch {
       width: 1000px;
       padding: 30px;
@@ -339,7 +426,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
   z-index: 30; /* Должен быть выше чем у подложки*/
 
   /*  Побочные стили   */
@@ -348,7 +435,7 @@
   padding: 30px;
   border-radius: 3px;
   background-color: rgba(247, 235, 68, 0.4);
-  transition: 0.3s all;
+  transition: all 0.8s ease 0s;
 }
 .modal__title {
   font-family: Titan One;
@@ -362,7 +449,12 @@
 
 /* Стили для активных классов подложки и окна */
 
-.modal.active,
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  transform: translate(-50%, -50%);
+}
 .overlay.active {
   opacity: 1;
   visibility: visible;

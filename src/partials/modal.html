@@ -16,7 +16,7 @@
 
 <!-- Несколько модальных окон -->
 
-<div class="modal" data-modal="buy">
+<div class="modal modal-buy" data-modal="buy">
    <!--   Svg иконка для закрытия окна  -->
    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
    <p class="modal__title">Заголовок окна buy</p>
@@ -42,9 +42,30 @@
 <div class="modal modal--franchise" data-modal="franchise">
   <!--   Svg иконка для закрытия окна  -->
   <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-  <p class="modal__title">franchise</p>
+  <p class="modal__title">OUR PARTNER</p>
+  <ul class="modal-franchise">
+    <li class="modal-franchise__item">
+         <div class="modal-franchise__thumb">
+          <img class="modal-franchise__img" src="images/modal1nasa.png" alt="nasa"/>
+         </div>
+     </li>
+    <li class="modal-franchise__item">
+       <div class="modal-franchise__thumb">
+        <img class="modal-franchise__img" src="images/modal2kozel.png" alt="kozel"/>
+       </div>
+    </li>
+    <li class="modal-franchise__item">
+       <div class="modal-franchise__thumb">
+        <img class="modal-franchise__img" src="images/modal3md.png" alt="jd"/>
+       </div>
+    </li>
+    <li class="modal-franchise__item">
+       <div class="modal-franchise__thumb">
+        <img class="modal-franchise__img" src="images/modal4amazon.png" alt="amazone"/>
+       </div>
+    </li>
+  </ul>
   <form type="submit" class="franchise__form">
-    <h2 class="franchise__title">Оставьте свои данные, мы вам перезвоним</h2>
     <label class="franchise__field">
       <span class="franchise__label">First name</span>
       <input type="text" class="franchise__input" name="name" autofocus/>
@@ -53,7 +74,7 @@
       <span class="franchise__label">Phone</span>
       <input type="tel" class="franchise__input" name="tel"/>
     </label>
-    <button type="submit" class="franchise__btn">Send</button>
+    <button type="submit" class="franchise__btn">join our company </button>
 </form>
 </div>
 <div class="modal modal--watch" data-modal="watch">
