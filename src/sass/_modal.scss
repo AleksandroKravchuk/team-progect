@@ -195,38 +195,30 @@
     }
   }
   &--watch {
+    width: 290px;
     height: auto;
-    .modal__container {
-      width: 100%;
-      height: auto;
-    }
+    padding: 5px;
     .modal-watch {
       width: 100%;
-      height: 95%;
-      outline: 1px solid blue;
+      height: auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: -15px;
-      padding: 3px;
+      margin: -3px;
     }
     .modal-watch__item {
-      flex-basis: calc(100% -2 * 30px) / 2;
-      margin: 15px;
+      flex-basis: calc(100% -2 * 6px) / 2;
+      margin: 3px;
     }
     .modal-watch__thumb {
-      width: 437px;
-      height: 270px;
+      width: 130px;
+      height: 80px;
     }
     .modal-watch__thumb > .modal-watch__img {
       display: block;
       height: 100%;
       width: 100%;
     }
-
-    // .modal-watch__item:last-child {
-    //   // margin: 0;
-    // }
   }
   &--cream {
     width: 250px;
@@ -267,6 +259,20 @@
       font-size: 22px;
       line-height: 1.13;
     }
+    &--watch {
+      width: 700px;
+      .modal-watch {
+        margin: -10px;
+      }
+      .modal-watch__item {
+        flex-basis: calc(100% -2 * 20px) / 2;
+        margin: 10px;
+      }
+      .modal-watch__thumb {
+        width: 285px;
+        height: 176px;
+      }
+    }
     &--cream {
       width: 340px;
       font-size: 20px;
@@ -294,6 +300,20 @@
       .modal__sun {
         width: 15%;
         height: 22%;
+      }
+    }
+    &--watch {
+      width: 1000px;
+      .modal-watch {
+        margin: -15px;
+      }
+      .modal-watch__item {
+        flex-basis: calc(100% -2 * 30px) / 2;
+        margin: 15px;
+      }
+      .modal-watch__thumb {
+        width: 437px;
+        height: 270px;
       }
     }
     &--cream {
