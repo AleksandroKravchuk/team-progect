@@ -1,7 +1,72 @@
-<section class="hero">
-    <div class="container">
-        <ul class="hero__list">
-            <li class="hero__item"><a class="hero__link" href=""></a></li>
-        </ul>
+<div class="backdrop is-hidden" data-modal-main>
+    <div class="modal-main">
+        <button class="modal__button-close" data-modal-close-main>
+            <svg class="modal__button-icon" width="18" height="18">
+                <use href="images/symbol-defs.svg#icon-close-black-18dp-2-1-5-1"> </use>
+            </svg>
+        </button>
+        <div class="modal-main__foto" style="background-image: url(images/icecream.jpg);">
+            <h5 class="modal-main__title">Наши продукты самые вкусные и полезные</h5>
+            <form class="form-product" id="form" action="#">
+                <p class="form-product__text">Заполни форму и помоги нам быть лучшими</p>
+                <ul>
+                    <li class="form-produc__item">
+                        <label class="form-produc__label" for="name">Имя*</label>
+                        <input class="form-produc__input" type="text" id="formname" name="name">
+                    </li>
+                    <li class="form-produc__item">
+                        <label class="form-produc__label" for="formemail">E-mail*</label>
+                        <input class="form-produc__input" type="text" id="formemail" name="email">
+                    </li>
+                    <li class="form-produc__item">
+                        <p class="form-produc__label">Пол</p>
+                        <div class="form-produc__men">
+                            <div class="form-produc__options">
+                                <input class="form__options-input" type="radio" checked id="man" value="man" name="пол">
+                                <label class="form-produc__options-label" for="man"> Мужчина</label>
+                            </div>
+                            <div class="form-produc__options">
+                                <input type="radio" class="form__options-input" id="wooman" value="man" name="пол">
+                                <label class="form-produc__options-label" for="wooman">Женщина</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="form-produc__item">
+                        <label class="form-produc__label" for="massage">Сообщение</label>
+                        <textarea class="form-produc__input" name="massage" id="massage" cols="30" rows="10"></textarea>
+                    </li>
+                    <li class="form-produc__item">
+                        <div class="form-produc__label">Возраст</div>
+                        <select name="age" class="form-produc__select">
+                            <option value="от 10 до 25">Молодой </option>
+                            <option value="от 25 до 49">Зрелый</option>
+                            <option value="от 49 до">Мудрый</option>
+                        </select>
+                    </li>
+                    <li class="form-produc__item">
+                        <div class="form-produc__label">Прикрепить фото</div>
+                        <div class="file">
+                            <div class="file__item">
+                                <input class="file__input" id="formImage" type="file" accept=".jpg, .png, .gif"
+                                    name="image">
+                                <div class="file__button">Выбрать</div>
+                            </div>
+                            <!-- <div class="file__preview"></div> -->
+                        </div>
+                    </li>
+                    <li class="form-produc__item">
+                        <div class="chekcbox">
+                            <input id="agreement" type="checkbox" name="agreement" class="checkbox__input" checked>
+                            <label class="chekcbox__label" for="agreement"><span>Я даю свое согласие на обработку
+                                    персональных данных в соответствии с &nbsp; <a class="chekcbox__link" href="#">
+                                        Условием*</a> </span> </label>
+                        </div>
+                    </li>
+                </ul>
+                <div class="form-produc__button-box">
+                    <button class="form-produc__button" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
     </div>
-</section>
+</div>

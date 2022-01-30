@@ -1,0 +1,104 @@
+.autor {
+    position: relative;
+}
+
+.autor__list-main {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+}
+
+.autor__slider {
+    width      : 260px;
+    height     : 40px;
+    margin-left: 20px;
+}
+
+.autor__list .slick-prev,
+.autor__list .slick-next {
+    width        : 14px;
+    height       : 14px;
+    border-radius: 50%;
+}
+
+.autor__list .slick-prev::before,
+.autor__list .slick-next::before {
+    content            : "";
+    display            : block;
+    background-size    : cover;
+    background-position: center;
+    background-repeat  : no-repeat;
+    width              : 14px;
+    height             : 14px;
+    opacity            : 0.5;
+}
+
+.autor__list .slick-prev::before {
+    background-image: url(../images/left.svg);
+
+}
+
+.autor__list .slick-next::before {
+    background-image: url(../images/right2.svg);
+
+}
+
+.autor__list .slick-prev:hover::before {
+    opacity: 1;
+}
+
+.autor__list .slick-next:hover::before {
+    opacity: 1;
+}
+
+
+
+.autor__list .autor__item {
+    margin-left  : 10px;
+    margin-right : 10px;
+    text-align   : center;
+    opacity      : 0.4;
+    border-radius: 50%;
+    transform    : scale(0.7);
+    transition   : opacity 300ms linear, transform 300ms linear;
+
+}
+
+.autor__list .autor__item.slick-center {
+    transform: scale(1);
+    opacity  : 1;
+
+    &::before {
+        position     : absolute;
+        display      : block;
+        content      : "";
+        width        : 70px;
+        height       : 70px;
+        border-radius: 50%;
+        border       : 1px solid #D64374;
+    }
+}
+
+.autor__list .autor__item1 {
+    margin-left : 10px;
+    margin-right: 10px;
+    transform   : scale(0.7);
+    transition  : opacity 300ms linear,
+        transform 300ms linear;
+    text-align: center;
+    opacity   : 0.4;
+
+    &.slick-center {
+        transform: scale(1);
+        opacity  : 1;
+    }
+}
+
+.autor__list-main .slick-list {
+    width: 60px;
+
+}
+
+.autor__list-main>.slick-arrow {
+    visibility: hidden;
+}

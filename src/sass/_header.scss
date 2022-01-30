@@ -13,15 +13,12 @@
 .page-header {
   display: flex;
   align-items: center;
-  z-index: 10;
 }
 .header-hero .container {
   position: relative;
 }
 .page-header__nav {
-  position: absolute;
-  left: 20%;
-  z-index: 50;
+  z-index: 10;
   display: none;
   @media screen and (min-width: 1280px) {
     margin-left: 110px;
@@ -50,7 +47,7 @@
   }
 }
 .page-header__button {
- 
+z-index: 5;
   @include button();
     &-icon {
       margin-left: 12px;
@@ -63,13 +60,13 @@
 display: none;
  }
   @media screen and (min-width: 768px) {
-    display: block;
     margin-left: auto;
    
   }
 }
 .page-header__link {
   @media screen and (max-width: 1279px) {
+ 
     @include text-link($fw: bold, $fs: 14px, $lx: 1.31, $color: $text-color-white);
   }
   @include text-link($fw: bold, $fs: 16px, $lx: 1.31, $color: $text-color-white);
@@ -78,6 +75,7 @@ display: none;
   &:focus {
     color: $accent-color;
   }
+
 }
 
 // ГЕРОЙ
