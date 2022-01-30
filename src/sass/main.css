@@ -1784,17 +1784,27 @@ summary {
   background-color: #FAFAFA;
 }
 
+.reviews__label {
+  width: 180px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+  /* or 31px */
+  text-align: center;
+  color: #000000;
+}
+
 .reviews__label::before {
   content: "";
   position: absolute;
   top: -15px;
   left: 10px;
-  background-image: url(../images/slider/brackets@1x.jpg);
+  background-image: url(../images/slider/brackets@1x.png);
   width: 54px;
   height: 40px;
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: -1;
+  z-index: 1;
 }
 
 .contacts__section {
