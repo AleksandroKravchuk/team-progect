@@ -255,12 +255,22 @@
   font-size: 12px;
   line-height: 18px;
   color: #907e82;
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+    line-height: 183%;
+  }
+  @media screen and(min-width: 1080px) {
+    font-size: 16px;
+  }
 }
 .contacts__button {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media screen and(min-width: 768px) {
+    flex-direction: row;
+  }
 }
 .contacts__button--left {
   background: #d41342;
@@ -284,6 +294,17 @@
   &:focus {
     background: #c7133e;
   }
+  @media screen and(min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 15px;
+    padding-left: 30px;
+    width: 192px;
+  }
+  @media screen and(min-width: 1080px) {
+    margin-right: 15px;
+    padding-left: 35px;
+    width: 198px;
+  }
 }
 .contacts__button--right {
   background: #ffffff;
@@ -306,6 +327,15 @@
   &:focus {
     background: #ecebeb;
   }
+  @media screen and(min-width: 768px) {
+    margin-bottom: 0;
+    padding-left: 30px;
+    width: 174px;
+  }
+  @media screen and(min-width: 1080px) {
+    padding-left: 39px;
+    width: 180px;
+  }
 }
 .contacts__icon {
   margin-left: 6px;
@@ -327,6 +357,23 @@
   opacity: 1;
   z-index: 15;
 }
+.backdrop__modal {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  animation-name: changeModalBtn;
+  animation-duration: 2000ms;
+  z-index: 3;
+  @media screen and(min-width: 768px) {
+    width: 500px;
+  }
+  @media screen and(min-width: 1080px) {
+    width: 640px;
+    height: 640px;
+  }
+}
 .backdrop__button--close {
   position: absolute;
   right: 5px;
@@ -340,4 +387,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.contacts__map {
+  @media screen and(min-width: 768px) {
+    width: 500px;
+    height: 500px;
+  }
+  @media screen and(min-width: 1080px) {
+    width: 640px;
+    height: 640px;
+  }
 }
