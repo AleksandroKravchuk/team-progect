@@ -261,6 +261,7 @@
     }
     &--watch {
       width: 700px;
+      padding: 20px;
       .modal-watch {
         margin: -10px;
       }
@@ -304,6 +305,7 @@
     }
     &--watch {
       width: 1000px;
+      padding: 30px;
       .modal-watch {
         margin: -15px;
       }
@@ -345,7 +347,7 @@
   text-align: center;
   padding: 30px;
   border-radius: 3px;
-  background-color: #fff;
+  background-color: rgba(247, 235, 68, 0.4);
   transition: 0.3s all;
 }
 .modal__title {
