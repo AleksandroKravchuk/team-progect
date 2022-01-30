@@ -129,12 +129,80 @@
       background-size: cover;
     }
   }
+  &--franchise {
+    .franchise__form {
+      width: 100%;
+      height: 100%;
+      /* outline: 1px solid gold; */
+      padding: 40px;
+      // overflow-y: scroll;
+    }
+    .franchise__title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: calc(23 / 20);
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 12px;
+    }
+    .franchise__field {
+      display: flex;
+      flex-direction: column;
+    }
+    .franchise__label {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+      letter-spacing: 0.01em;
+      color: #757575;
+      margin-bottom: 4px;
+    }
+
+    .franchise__input {
+      border-color: 1px solid rgba(33, 33, 33, 0.2);
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+      letter-spacing: 0.01em;
+      color: #757575;
+      padding-left: 42px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      padding-right: 11px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .form__input:hover,
+    .form__input:focus {
+      border-color: var(--accent-color);
+      outline: var(--accent-color);
+      fill: var(--accent-color);
+      transition-property: border-color, fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    .franchise__input:focus,
+    .franchise__input:hover {
+      fill: var(--accent-color);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
   &--watch {
+    height: auto;
     .modal__container {
       width: 100%;
-      height: 95%;
+      height: auto;
     }
     .modal-watch {
+      width: 100%;
+      height: 95%;
       outline: 1px solid blue;
       display: flex;
       flex-wrap: wrap;
@@ -146,9 +214,19 @@
       flex-basis: calc(100% -2 * 30px) / 2;
       margin: 15px;
     }
-    .modal-watch__item:last-child {
-      margin: 0;
+    .modal-watch__thumb {
+      width: 437px;
+      height: 270px;
     }
+    .modal-watch__thumb > .modal-watch__img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    // .modal-watch__item:last-child {
+    //   // margin: 0;
+    // }
   }
   &--cream {
     width: 250px;
