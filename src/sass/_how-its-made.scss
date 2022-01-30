@@ -1,17 +1,51 @@
 .how-its-made {
     background-color: $bckg-color-roze;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 39px;
+    
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center 766px;
+
+    background-image: url(../images/sectionbgmilk-mob.png);
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/sectionbgmilk-mob@2x.png);
+        }
+
+    @media screen and (min-width: 768px){
+        background-image: none;
+        padding-bottom: 66px;
+    }
+
+    @media screen and (min-width: 1280px){
+        padding-bottom: 39px;
+        background-position: center 342px;
+        background-size: 100% 534px;
+        background-image: url(../images/sectionbgmilk-desk.png);
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/sectionbgmilk-desk@2x.png);
+        }
+    }
 
     &__lable {
         padding-top: 125px;
-        @include secondary-text($fw: 400, $fs: 18px, $lx: 1.17, $color: #FFA5BA, $ls:0.06em);
+        @include secondary-text($fw: 400, $fs: 18px, $lx: 1.17, $color: $pre-title-text-color, $ls:0.06em);
         text-align: center;
     
         @media screen and (min-width: 768px) {
-            @include secondary-text($fw: 400, $fs: 26px, $lx: 1.17, $color: #FFA5BA, $ls:0.06em);
+            @include secondary-text($fw: 400, $fs: 26px, $lx: 1.17, $color: $pre-title-text-color, $ls:0.06em);
         }
     
         @media screen and (min-width: 1280px) {
-            @include secondary-text($fw: 400, $fs: 30px, $lx: 1.13, $color: #FFA5BA, $ls:0.06em);
+            @include secondary-text($fw: 400, $fs: 30px, $lx: 1.13, $color: $pre-title-text-color, $ls:0.06em);
         }
     }
 
@@ -88,18 +122,18 @@
     }
 
     &__description {
-        @include main-text($fw: 500, $fs: 12px, $lx: 1.62, $color: #907E82, $ls:0.04em);
+        @include main-text($fw: 500, $fs: 12px, $lx: 1.62, $color: $gray-pink-text-color, $ls:0.04em);
         padding-top: 46px;
         padding-bottom: 46px;
         text-align: left;
     
         @media screen and (min-width: 768px) {
-            @include main-text($fw: 500, $fs: 14px, $lx: 1.76, $color: #907E82, $ls:0.04em); 
+            @include main-text($fw: 500, $fs: 14px, $lx: 1.76, $color: $gray-pink-text-color, $ls:0.04em); 
             padding-bottom: 62px;
         }
         
          @media screen and (min-width: 1280px) {
-            @include main-text($fw: 500, $fs: 14px, $lx: 1.93, $color: #907E82, $ls:0.04em);
+            @include main-text($fw: 500, $fs: 14px, $lx: 1.93, $color: $gray-pink-text-color, $ls:0.04em);
             padding-top: 35px;
         }
     }
@@ -111,34 +145,26 @@
         font-weight: bold;
         font-size  : 14px;
         line-height: 1.31;
-        padding: 10px 56px 10px 37px;
+        padding: 12px 30px 12px 40px;
         background: $text-color-white;
         border-radius: 22px;
         color: $accent-color;
         border: none;
-        cursor: pointer;     
+        cursor: pointer;
+        
+        &-icon {
+            margin-left: 12px;
+        }
+            &:hover,
+            &:focus {
+                background: #ecebeb;
+        }
     
         @media screen and (min-width: 768px) {
            font-size: 16px;
         }
     }
 }
-
-
-// section {
-//     max-width: 1600px;
-//     height: auto;
-
-//     background-image: url(../images/sectionbgmilk-mob.png);
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-//     @media (min-device-pixel-ratio: 2),
-//         (min-resolution: 192dpi),
-//         (min-resolution: 2dppx) {
-//         background-image: url(../images/sectionbgmilk-mob@2x.png);
-//         }
-// }
 
 
 // section advantages 
@@ -150,8 +176,7 @@
 
 .feature {
     display: block;
-    padding-top: 39px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     width: 280px;
     margin-left: auto;
     margin-right: auto;
@@ -159,12 +184,7 @@
     @media screen and (min-width: 768px) {
         width: auto;
         display: flex;
-        padding-top: 66px;
-        padding-bottom: 140px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        padding-top: 39px;
+        padding-bottom: 70px;
     }
 
     &__list {
@@ -217,19 +237,47 @@
     }
 }
 
-// .feature__list::before {
-//     content: '';
-//     width: 33px;
-//     height: 50px;
-//     margin-top: 16px;
-//     background-image: url(../images/icon1.png);
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: left;
-//     @media (min-device-pixel-ratio: 2),
-//             (min-resolution: 192dpi),
-//             (min-resolution: 2dppx) {
-//             background-image: url(../images/icon1@2x.png);
-//             }
-// }
+.feature__list::before {
+    content: '';
+    display: block;
+    width: 33px;
+    height: 50px;
+    margin-bottom: 16px;
+    background-image: url(../images/icon1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/icon1@2x.png);
+        }
 
+    @media screen and (min-width: 768px) {
+        margin-bottom: 36px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 40px;
+    }
+}
+
+.feature__list--icon2::before {
+    width: 50px;
+    background-image: url(../images/icon2.png);
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/icon2@2x.png);
+        }
+}
+
+.feature__list--icon3::before {
+    width: 44px;
+    background-image: url(../images/icon3.png);
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/icon3@2x.png);
+        }
+}
