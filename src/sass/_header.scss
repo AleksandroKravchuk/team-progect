@@ -35,16 +35,12 @@
   }
 }
 .page-header__item {
-  @media screen and (max-width: 1179px) {
+  @media screen and (max-width: 1279px) {
     padding: 11px 0;
     border-bottom: 1px solid rgb(163, 158, 158);
     width: 100%;
   }
-    @media screen and (min-width: 768px) and (max-width: 1179px) {
-    padding      : 11px 0;
-    border-bottom: 1px solid rgb(163, 158, 158);
-    width        : 100%;
-  }
+ 
 }
 .page-header__item:not(:last-child) {
   @media screen and (min-width: 1280px) {
@@ -71,8 +67,8 @@ display: none;
 }
 .page-header__link {
   @media screen and (max-width: 1279px) {
- 
     @include text-link($fw: bold, $fs: 14px, $lx: 1.31, $color: $text-color-white);
+    padding: 11px 100px 10px 0;
   }
   @include text-link($fw: bold, $fs: 16px, $lx: 1.31, $color: $text-color-white);
   transition: color 300ms linear;
