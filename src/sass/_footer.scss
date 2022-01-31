@@ -1,0 +1,43 @@
+.footer {
+  background-color: $bckg-color-roze;
+}
+.footer__first-text {
+  @include secondary-text($fw: 400, $fs: 18px, $lx: 1.16, $color: $bckg-color-accent, $ls: 0.04);
+  padding-left: 22px;
+  padding-right: 66px;
+  padding-bottom: 17px;
+}
+.footer__second-text {
+  @include secondary-text($fw: 400, $fs: 34px, $lx: 1.14, $color: $accent-color, $ls: 0.04);
+  padding-left: 20px;
+}
+.media-footer__icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.media-footer__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $bckg-color-accent;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: white;
+  &:hover,
+  &:focus {
+    background-color: white;
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}
+.footer__contact-text {
+  @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $text-color-black, $ls: 0.04);
+}
+.footer__contact-text__tel {
+  @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $accent-color, $ls: 0.04);
+}
+.footer__text-rights {
+  @include main-text($fw: 700, $fs: 14px, $lx: 1.52, $color: #907e82, $ls: 0.04);
+}
