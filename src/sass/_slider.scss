@@ -161,16 +161,47 @@
     background-color: #d9d9d9;
 }
 
-.reviews__list .slick-dots li.slick-active button {
-    &::before {
-        background-image: url(../images/slider/home.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        border-radius: 0;
-        background-color: #fff;
-        width: 13px;
-        height: auto;
+// .reviews__list .slick-dots li.slick-active button {
+//     &::before {
+//         background-image: url(../images/slider/home.svg);
+//         background-repeat: no-repeat;
+//         background-size: contain;
+//         border-radius: 0;
+//         background-color: #fff;
+//         width: 13px;
+//         height: auto;
+//     }
+
+// }
+.slick-dots li {
+    visibility: hidden;
+    &::after {
+        content            : "";
+        display            : block;
+        background-image   : url(../images/points.svg);
+        width              : 12px;
+        height             : 12px;
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+        visibility         : visible;
     }
 
 }
 
+/* Активная точка */
+.slick-dots li.slick-active {
+    visibility: hidden;
+
+    &::after {
+        content            : "";
+        display            : block;
+        background-image   : url(../images/house.svg);
+        width              : 12px;
+        height             : 12px;
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+        visibility         : visible;
+    }
+}

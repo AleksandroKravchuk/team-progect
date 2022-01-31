@@ -40,6 +40,11 @@
     border-bottom: 1px solid rgb(163, 158, 158);
     width: 100%;
   }
+    @media screen and (min-width: 768px) and (max-width: 1179px) {
+    padding      : 11px 0;
+    border-bottom: 1px solid rgb(163, 158, 158);
+    width        : 100%;
+  }
 }
 .page-header__item:not(:last-child) {
   @media screen and (min-width: 1280px) {
