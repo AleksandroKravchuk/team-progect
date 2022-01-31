@@ -4,6 +4,7 @@
     @media screen and (min-width: 768px) {
         padding-top: 61px;
         padding-bottom: 60px;
+        background-image: linear-gradient(#fff5f6 50%);
     }
 
     @media screen and (min-width: 1280px) {
@@ -12,55 +13,8 @@
     }
 }
 
-// .reviews__list {
-    
-// }
-
-
-.reviews__wrapper {
-    margin: 0 auto 30px auto;
-    width: 280px;
-    height: 308px;
-    position: relative;
-    padding: 43px 50px 20px 50px;
-    background-color: #FAFAFA;
-}
-
-.reviews__label {
-    display: flex;
-    position: relative;
-    width: 180px;
-    padding: 0 16px 3px 7px;
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 2.55;
-    /* or 31px */
-    text-align: center;
-    color: #000000;
-    background: repeating-linear-gradient(180deg,
-    #E1E1E1 0,
-    transparent 1px,
-    transparent 30px,
-    #E1E1E1 0,
-    #E1E1E1 31px);
-    background-position: center bottom 3px;
-    z-index: 2;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: -15px;
-        left: 4px;
-        background-image: url(../images/slider/brackets@1x.png);
-        width: 54px;
-        height: 40px;
-        background-repeat: no-repeat;
-        background-size: contain;
-    
-        z-index: -1;
-    }
+.reviews__list {
+    min-width: 0;
 }
 
 .reviews__img {
@@ -76,6 +30,81 @@
     }
 }
 
+.reviews__wrapper {
+    margin: 0 auto 30px auto;
+    width: 280px;
+    height: 308px;
+    position: relative;
+    padding: 43px 50px 20px 50px;
+    background-color: #FAFAFA;
+    @media screen and(min-width:768px) {
+        width: 620px;
+        height: 164px;
+        margin-bottom: 24px;
+    }
+    @media screen and(min-width:1280px) {
+        width: 920px;
+        height: 138px;
+        margin-bottom: 15px;
+    }
+}
+
+.reviews__label {
+    display: flex;
+    position: relative;
+    width: 180px;
+    padding: 0 16px 3px 7px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 2.55;
+    /* or 31px */
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+    background: repeating-linear-gradient(180deg,
+    #E1E1E1 0,
+    transparent 1px,
+    transparent 30px,
+    #E1E1E1 0,
+    #E1E1E1 31px);
+    background-position: center bottom 3px;
+    z-index: 2;
+
+    @media screen and (min-width: 768px) {
+        margin: 0 auto;
+        width: 450px;
+    
+        font-size: 14px;
+        line-height: 2.14;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 820px;
+    
+        font-size: 16px;
+        line-height: 1.86;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 4px;
+        background-image: url(../images/slider/brackets@1x.png);
+        width: 54px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    
+        z-index: -1;
+
+        @media screen and (min-width: 480px) {
+            left: -20px;
+        }
+    }
+}
+
 .reviews__location {
     margin-bottom: 30px;
     font-family: DM Sans;
@@ -86,4 +115,62 @@
     /* or 26px */
     text-align: center;
     color: #000000;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 4px;
+        margin: 0 auto 18px auto;
+        background-image: url(../images/slider/dots.svg);
+        @media screen and (min-width: 768px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 35px;
+    }
 }
+
+.slick-track {
+    display: flex;
+}
+
+.reviews__list .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+}
+
+.reviews__list .slick-dots li {
+    margin: 0 6px;
+    list-style: none;
+    width: 12px;
+    height: 12px;
+}
+
+.reviews__list .slick-dots button {
+    padding: 0;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    color: #d9d9d9;
+    background: #d9d9d9;
+    background-color: #d9d9d9;
+}
+
+.reviews__list .slick-dots li.slick-active button {
+    &::before {
+        background-image: url(../images/slider/home.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 0;
+        background-color: #fff;
+        width: 13px;
+        height: auto;
+    }
+
+}
+
