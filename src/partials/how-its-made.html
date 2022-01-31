@@ -1,6 +1,4 @@
-<body> 
-
-<section class="how-its-made">
+<section class="how-its-made" id="how-its-made">
     <div class="container">
         <p class="how-its-made__lable">TRADITION AND LOVE</p>
         <h2 class="how-its-made__title">HOW IT'S MADE?</h2>
@@ -25,7 +23,11 @@
 
                     Aliquam erat volutpat. Aenean accumsan.</p>
 
-                <button class="how-its-made__button" type="button">Read more</button>
+                <button class="how-its-made__button js-open-modal" data-modal="watch" type="button">Read more
+                    <svg class="how-its-made__button-icon" width="5" height="8" aria-label="Read more">
+                        <use href="images/symbol-defs.svg#icon-right-2"></use>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
@@ -33,17 +35,17 @@
 
 <section class="advantages">
     <div class="container">
-        <h2 class="visually-hidden">Advantages</h2>
+        <h2 class="advantages__title visually-hidden">Advantages</h2>
         <ul class="feature">
             <li class="feature__list">
                 <p class="feature__figure">721</p>
                 <p class="feature__text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
             </li>
-            <li class="feature__list">
+            <li class="feature__list feature__list--icon2">
                 <p class="feature__figure">16KG</p>
                 <p class="feature__text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
             </li>
-            <li class="feature__list">
+            <li class="feature__list feature__list--icon3">
                 <p class="feature__figure">84</p>
                 <p class="feature__text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
             </li>
@@ -52,4 +54,3 @@
     
 </section>
 
-</body>

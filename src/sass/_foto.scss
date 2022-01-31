@@ -27,6 +27,7 @@
   &__grid-d,
   &__grid-e,
   &__grid-f {
+    width: 100%;
     margin: 3px;
     @media screen and (min-width: 768px) {
       margin: 5px;
@@ -47,36 +48,58 @@
     @media screen and (min-width: 1280px) {
     }
   }
+
   &__photo {
-    max-width: 35px;
+    display: inline-block;
+    max-width: 100%;
     border-radius: 5px;
+    transition: 600ms linear;
+
     @media screen and (min-width: 768px) {
-      max-width: 80px;
+      max-width: 100%;
       border-radius: 10px;
     }
     @media screen and (min-width: 1280px) {
-      max-width: 120px;
+      max-width: 100%;
       border-radius: 15px;
     }
-  }
-  &__photo:not(:last-child) {
-    margin-bottom: 3px;
-    @media screen and (min-width: 768px) {
-      margin-bottom: 6px;
+    &:hover,
+    &:focus {
+      z-index: 9;
+      transform: scale(2) rotateY(180deg);
     }
-    @media screen and (min-width: 1280px) {
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 3px;
+      }
+      @media screen and (min-width: 1280px) {
+      }
     }
-  }
-  &__photo--big {
-    max-width: 80px;
-    max-height: 80px;
-    @media screen and (min-width: 768px) {
-      max-width: 150px;
-      max-height: 150px;
+    &--big {
+      max-width: 100px;
+      max-height: 100px;
+      @media screen and (min-width: 768px) {
+        max-width: 170px;
+        max-height: 170px;
+      }
+      @media screen and (min-width: 1280px) {
+        max-width: 350px;
+        max-height: 250px;
+      }
     }
-    @media screen and (min-width: 1280px) {
-      max-width: 200px;
-      max-height: 200px;
+    &--small {
+      max-width: 60px;
+      max-height: 75px;
+      @media screen and (min-width: 768px) {
+        max-width: 105px;
+        max-height: 140px;
+      }
+      @media screen and (min-width: 1280px) {
+        max-width: 165px;
+        max-height: 220px;
+      }
     }
   }
 }

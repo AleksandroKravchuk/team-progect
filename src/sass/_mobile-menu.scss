@@ -2,19 +2,21 @@
     position: absolute;
     top: 23px;
     right: 34px;
-    fill            : $text-color-white;
     border          : none;
     background-color: transparent;
+    cursor: pointer;
     @media screen and (min-width: 1280px) {
         display: none;
     }
+
 }
+
 .menu-button-burger.is-open .menu-button__icon--cross {
     display: none;
 }
 
 .menu-button-burger {
-    @media screen and (max-width: 330px) {
+    @media screen and (max-width: 767px) {
         margin-left: auto;
     }
    
@@ -58,11 +60,24 @@ transition: transform 300ms linear, opacity 300ms linear;
     z-index: 300;
     transform: translateX(0);
     opacity: 1;
+}}
+  
+.page-header__button-mobile {
+@include button();
+margin-top: 40px;
+width: 100%;
+justify-content: center;
+&-icon {
+    margin-left: 12px;
 }
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        transform: translateX(-55%);
-        
-    }
+&:hover,
+&:focus {
+    background: #ecebeb;
+}
+
+    @media screen and (min-width: 1280px)  {
+display: none;
+}
 }
 // .page-header__list {  
 

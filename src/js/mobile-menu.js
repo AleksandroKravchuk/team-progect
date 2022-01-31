@@ -17,4 +17,16 @@
     mobileMenuRef.classList.remove("is-open");
     document.body.classList.remove("modal-open");
   });
+   $('a[href^="#"').on('click', function () {
+
+        let href = $(this).attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        });
+    mobileMenuRef.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+    menuBtnRef.classList.remove("is-open");
+        return false;
+    });
 })();
