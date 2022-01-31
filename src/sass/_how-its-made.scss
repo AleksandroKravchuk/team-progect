@@ -1,0 +1,283 @@
+.how-its-made {
+    background-color: $bckg-color-roze;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 39px;
+    
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center 766px;
+
+    background-image: url(../images/sectionbgmilk-mob.png);
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/sectionbgmilk-mob@2x.png);
+        }
+
+    @media screen and (min-width: 768px){
+        background-image: none;
+        padding-bottom: 66px;
+    }
+
+    @media screen and (min-width: 1280px){
+        padding-bottom: 39px;
+        background-position: center 342px;
+        background-size: 100% 534px;
+        background-image: url(../images/sectionbgmilk-desk.png);
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/sectionbgmilk-desk@2x.png);
+        }
+    }
+
+    &__lable {
+        padding-top: 125px;
+        @include secondary-text($fw: 400, $fs: 18px, $lx: 1.17, $color: $pre-title-text-color, $ls:0.06em);
+        text-align: center;
+    
+        @media screen and (min-width: 768px) {
+            @include secondary-text($fw: 400, $fs: 26px, $lx: 1.17, $color: $pre-title-text-color, $ls:0.06em);
+        }
+    
+        @media screen and (min-width: 1280px) {
+            @include secondary-text($fw: 400, $fs: 30px, $lx: 1.13, $color: $pre-title-text-color, $ls:0.06em);
+        }
+    }
+
+    &__title {
+        padding-top: 15px;
+        padding-bottom: 25px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        @include secondary-text($fw: 400, $fs: 34px, $lx: 1.14, $color: $accent-color, $ls:0.04em);
+        text-align: center;
+    
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            @include secondary-text($fw: 400, $fs: 48px, $lx: 1.14, $color: $accent-color, $ls:0.04em);
+            padding-bottom: 50px;
+        }
+    
+        @media screen and (min-width: 1280px) {
+            @include secondary-text($fw: 400, $fs: 58px, $lx: 1.14, $color: $accent-color, $ls:0.04em);
+            padding-bottom: 55px;
+        }
+    }
+
+    &__container {
+        @media screen and (min-width: 768px) {
+           display: flex;
+        }
+    }
+
+    &__image {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        @media screen and (min-width: 768px) {
+           width: 340px;
+           margin-left: 0;
+        }
+    
+        @media screen and (min-width: 1280px) {
+            width: 516px;
+        }
+    }
+
+    &__box{
+        display: block;
+        width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        @media screen and (min-width: 768px) {
+            width: 340px;
+            margin-right: 0;
+        }
+        
+        @media screen and (min-width: 1280px) {
+            width: 463px;
+        }
+    }
+
+    &__text {
+        @include main-text($fw: 500, $fs: 12px, $lx: 1.62, $color: $text-color-black, $ls:0.04em); 
+        padding-top: 46px;
+        text-align: left;
+    
+        @media screen and (min-width: 768px) {
+            @include main-text($fw: 500, $fs: 14px, $lx: 1.76, $color: $text-color-black, $ls:0.04em); 
+        }
+    
+        @media screen and (min-width: 1280px) {
+            @include main-text($fw: 500, $fs: 16px, $lx: 1.75, $color: $text-color-black, $ls:0.04em);
+        }
+    }
+
+    &__description {
+        @include main-text($fw: 500, $fs: 12px, $lx: 1.62, $color: $gray-pink-text-color, $ls:0.04em);
+        padding-top: 46px;
+        padding-bottom: 46px;
+        text-align: left;
+    
+        @media screen and (min-width: 768px) {
+            @include main-text($fw: 500, $fs: 14px, $lx: 1.76, $color: $gray-pink-text-color, $ls:0.04em); 
+            padding-bottom: 62px;
+        }
+        
+         @media screen and (min-width: 1280px) {
+            @include main-text($fw: 500, $fs: 14px, $lx: 1.93, $color: $gray-pink-text-color, $ls:0.04em);
+            padding-top: 35px;
+        }
+    }
+
+    &__button {
+        @include button ($img: url(../images/), $wh:176px, $ht:44px, $bz:cover); 
+        font-family: DM Sans;
+        font-style : normal;
+        font-weight: bold;
+        font-size  : 14px;
+        line-height: 1.31;
+        padding: 12px 30px 12px 40px;
+        background: $text-color-white;
+        border-radius: 22px;
+        color: $accent-color;
+        border: none;
+        cursor: pointer;
+        
+        &-icon {
+            margin-left: 12px;
+        }
+            &:hover,
+            &:focus {
+                background: #ecebeb;
+        }
+    
+        @media screen and (min-width: 768px) {
+           font-size: 16px;
+        }
+    }
+}
+
+
+// section advantages 
+
+
+.advantages {
+    background-color: $bckg-color-roze;
+}
+
+.feature {
+    display: block;
+    padding-bottom: 50px;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+        width: auto;
+        display: flex;
+        padding-bottom: 70px;
+    }
+
+    &__list {
+        margin-bottom: 38px;
+    
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+            margin-right: 60px;
+        }
+    
+        @media screen and (min-width: 1280px) {
+            margin-right: 30px;
+        }
+    
+        &:last-child {
+            margin-bottom: 0;
+    
+            @media screen and (min-width: 768px) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__figure {
+        @include secondary-text($fw: 400, $fs: 36px, $lx: 1.14, $color: $accent-color, $ls:0.04em);
+    
+        @media screen and (min-width: 768px) {
+            @include secondary-text($fw: 400, $fs: 48px, $lx: 1.14, $color: $accent-color, $ls:0.04em);
+        }
+    
+        @media screen and (min-width: 1280px) {
+            @include secondary-text($fw: 400, $fs: 58px, $lx: 1.14, $color: $accent-color, $ls:0.04em);
+        }
+    }
+
+    &__text {
+        padding-top: 15px;
+        @include main-text($fw: 700, $fs: 12px, $lx: 1.7, $color: $text-color-black, $ls:0.04em);
+        width: 230px;
+    
+        @media screen and (min-width: 768px) {
+            @include main-text($fw: 700, $fs: 14px, $lx: 1.7, $color: $text-color-black, $ls:0.04em);
+            width: 180px;
+        }
+        
+        @media screen and (min-width: 1280px) {
+            @include main-text($fw: 700, $fs: 16px, $lx: 1.76, $color: $text-color-black, $ls:0.02em);
+            width: 330px;
+        }
+    }
+}
+
+.feature__list::before {
+    content: '';
+    display: block;
+    width: 33px;
+    height: 50px;
+    margin-bottom: 16px;
+    background-image: url(../images/icon1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/icon1@2x.png);
+        }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 36px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 40px;
+    }
+}
+
+.feature__list--icon2::before {
+    width: 50px;
+    background-image: url(../images/icon2.png);
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/icon2@2x.png);
+        }
+}
+
+.feature__list--icon3::before {
+    width: 44px;
+    background-image: url(../images/icon3.png);
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/icon3@2x.png);
+        }
+}
