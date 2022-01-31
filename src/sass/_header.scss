@@ -13,15 +13,12 @@
 .page-header {
   display: flex;
   align-items: center;
-  z-index: 10;
 }
 .header-hero .container {
   position: relative;
 }
 .page-header__nav {
-  position: absolute;
-  left: 20%;
-  z-index: 50;
+  z-index: 10;
   display: none;
   @media screen and (min-width: 1280px) {
     margin-left: 110px;
@@ -50,11 +47,8 @@
   }
 }
 .page-header__button {
- display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
-    margin-left: auto;
-    @include button();
+z-index: 5;
+  @include button();
     &-icon {
       margin-left: 12px;
     }
@@ -62,10 +56,17 @@
     &:focus {
       background: #ecebeb;
     }
+  @media screen and (max-width: 767px) {
+display: none;
+ }
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+   
   }
 }
 .page-header__link {
   @media screen and (max-width: 1279px) {
+ 
     @include text-link($fw: bold, $fs: 14px, $lx: 1.31, $color: $text-color-white);
   }
   @include text-link($fw: bold, $fs: 16px, $lx: 1.31, $color: $text-color-white);
@@ -74,6 +75,7 @@
   &:focus {
     color: $accent-color;
   }
+
 }
 
 // ГЕРОЙ
@@ -410,6 +412,7 @@
     width: 171px;
     top: 180%;
     left: 30%;
+    
   }
   position: absolute;
   top: 12%;
@@ -423,6 +426,7 @@
       transform: translateY(50%);
       opacity: 0;
     }
+ 
     100% {
       opacity: 1;
       transform: translateY(0);

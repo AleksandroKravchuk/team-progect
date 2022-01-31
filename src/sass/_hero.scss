@@ -1,0 +1,369 @@
+.backdrop {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    min-width       : 100%;
+    min-height      : 100%;
+    padding         : 10px 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity         : 1;
+    overflow-y      : scroll;
+    transition: all 800ms linear;
+
+    &.is-hidden {
+        visibility    : hidden;
+        opacity       : 0;
+        pointer-events: none;
+        transform: perspective(600px) translateX(50%) rotateY(45deg);
+        transition: all 800ms linear;
+    }
+}
+
+.modal-main {
+    width   : 100vw;
+    height  : 100vh;
+transition: all 800ms linear;
+opacity: 1;
+transform: perspective(600px) translateX(-100%) rotateY(0deg);
+    @media screen and (min-width: 768px) {
+        width : 90%;
+        left  : 50%;
+        height: 90vh;
+    }
+
+    @media screen and (min-width: 1120px) {
+        width : 900px;
+        left  : 50%;
+        height: 600px;
+    }
+
+    border-radius   : 6px;
+    transform       : scale(1) translateX(-50%);
+    background-color: $black-text-color;
+
+    & {
+        position  : relative;
+        padding   : 1em;
+        margin    : 0.2em 10px;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3),
+            0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    &:before,
+    &:after {
+        content : '';
+        position: absolute;
+        z-index : -2;
+    }
+
+    .modal-main__foto {
+        text-align: center;
+        width     : 100%;
+        height    : 100%;
+        padding   : 10px 20px;
+    }
+}
+
+.modal__button-close {
+    position     : absolute;
+    top          : 4px;
+    right        : 4px;
+    width        : 30px;
+    height       : 30px;
+    border-radius: 50%;
+    fill: $accent-color;
+    cursor       : pointer;
+    opacity      : 0.5;
+    border       : 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing   : border-box;
+    display      : flex;
+    align-items  : center;
+    transition   : box-shadow 250ms linear, opacity 250ms linear, fill 250ms linear;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+        opacity: 1;
+    }
+}
+
+.modal-main__title {
+    @include main-text($fw: 400, $fs: 18px, $lx: 1.5, $color: $bckg-color-roze);
+     margin-bottom: 10px;
+    text-shadow      : 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+
+    @media screen and (min-width: 768px) {
+        @include main-text($fw: 500, $fs: 24px, $lx: 1.5, $color: $bckg-color-roze);
+         margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        @include main-text($fw: 600, $fs: 28px, $lx: 1.5, $color: $bckg-color-roze);
+         margin-bottom: 20px;
+    }
+
+}
+
+.form-product {
+
+    text-align: start;
+
+    @media screen and (min-width: 768px) {
+        width: 350px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        width: 400px;
+    }
+}
+
+.form-product__text {
+    @include main-text($fw: 400, $fs: 10px, $color: $bckg-color-roze);
+     text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+        0px -5px 35px rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+
+    @media screen and (min-width:768px) {
+        @include main-text($fs: 16px, $color: $bckg-color-roze);
+         text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+            0px -5px 35px rgba(255, 255, 255, 0.3);
+        margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        @include main-text($fs: 18px, $color: $bckg-color-roze);
+         text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+            0px -5px 35px rgba(255, 255, 255, 0.3);
+        margin-bottom: 20px;
+    }
+}
+
+.form-produc__item {
+    margin-bottom: 10px;
+}
+
+.form-produc__item:nth-child(6) {
+    display    : flex;
+    align-items: center;
+}
+
+.form-produc__label {
+    @include main-text($fw: 300, $fs: 12px, $lx: 1.2, $color: $bckg-color-roze);
+    display          : block;
+    margin-bottom    : 5px;
+}
+
+.form-produc__men {
+    margin-top: 9px;
+}
+
+.form-produc__input {
+    width        : 100%;
+    border-radius: 5px;
+    padding      : 2px 15px;
+    border       : 1px solid $accent-color;
+    outline      : none;
+
+    &:hover,
+    &:focus {
+        background-color: #ffc0cb;
+    }
+}
+
+textarea.form-produc__input {
+    height : 40px;
+    resize : none;
+    padding: 2px 15px;
+}
+
+.form-produc__men {
+    display: flex;
+}
+
+.form-produc__options:nth-child(2) {
+    margin-left: 50px;
+}
+
+.form__options-input {
+    display: none;
+}
+
+.form__options-input:checked+.form-produc__options-label::after {
+    transform: scale(1);
+}
+
+.form-produc__options-label {
+    @include main-text($fw: 300, $fs: 12px, $lx: 1.2, $color: $bckg-color-roze);
+    display          : inline-flex;
+    position         : relative;
+    cursor           : pointer;
+}
+
+.form-produc__options-label::before {
+    content         : '';
+    align-self      : flex-start;
+    flex            : 0 0 24px;
+    height          : 24px;
+    background-color: $bckg-color-roze;
+    border-radius   : 50%;
+    margin-right    : 10px;
+    cursor          : pointer;
+    margin-top      : -4px;
+}
+
+.form-produc__options-label::after {
+    content         : '';
+    position        : absolute;
+    width           : 16px;
+    height          : 16px;
+    left            : 4px;
+    border-radius   : 50%;
+    background-color: $accent-color;
+    transform       : scale(0);
+    transition      : transform 300ms linear;
+}
+
+.form-produc__select {
+    width        : 100%;
+    cursor       : pointer;
+    border       : 1px solid $accent-color;
+    outline      : none;
+    height       : 25px;
+    border-radius: 5px;
+    padding      : 2px 15px;
+}
+
+.file {
+    margin-left: 10px;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 30px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        margin-left: 65px;
+    }
+}
+
+.file__item {
+    position: relative;
+}
+
+.file__input {
+    position : absolute;
+    top      : 0;
+    left     : 0;
+    width    : 100%;
+    height   : 100%;
+    opacity  : 0;
+    font-size: 0;
+    cursor   : pointer;
+}
+
+.file__button {
+    @include main-text($fw: normal, $fs: 14px, $lx: 1.5, $color: $bckg-color-roze );
+     display:
+        inline-flex;
+    min-height      : 40px;
+    border-radius   : 30px;
+    justify-content : center;
+    align-items     : center;
+    background-color: $accent-color;
+    padding         : 0 20px;
+    box-shadow      : 0px 3px 1px rgba(0, 0, 0, 0.2);
+    transition      : box-shadow 250ms linear;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
+    }
+}
+
+.file__preview {
+    display  : inline-block;
+    max-width: 100px;
+    padding  : 10px 0 0 0;
+}
+
+.file__preview img {
+    max-width: 100%;
+}
+
+.checkbox__input {
+    display: none;
+}
+
+.checkbox__input:checked+.chekcbox__label::after {
+    transform: scale(1);
+}
+
+.chekcbox__label {
+    @include main-text($fw: 300, $fs: 10px, $lx: 1.2, $color: $bckg-color-roze);
+    display          : inline-flex;
+    align-items      : center;
+    position         : relative;
+    cursor           : pointer;
+
+    &::before {
+        content         : '';
+        flex            : 0 0 15px;
+        height          : 15px;
+        background-color: $bckg-color-roze;
+        border-radius   : 4px;
+        align-self      : flex-start;
+        margin-right    : 10px;
+        margin-top      : 5px;
+    }
+
+    &::after {
+        content         : '';
+        position        : absolute;
+        width           : 11px;
+        height          : 11px;
+        background-color: $bckg-color-roze;
+        border-radius   : 4px;
+        align-self      : flex-start;
+        margin-right    : 10px;
+        top             : 8px;
+        left            : 2px;
+        border-radius   : 4px;
+        background-color: $accent-color;
+        transform       : scale(0);
+        transition      : transform 250ms linear;
+    }
+}
+
+.chekcbox__link {
+    @include main-text($fw: 600, $fs: 14px, $lx: 1.5, $color: rgb(61, 61, 245));
+
+    &:hover,
+    &:focus {
+        text-decoration-line : underline;
+        text-decoration-style: dashed;
+    }
+}
+
+.form-produc__button-box {
+    text-align: center;
+}
+
+.form-produc__button {
+    @include main-text($fw: normal, $fs: 16px, $lx: 1.5, $color: $bckg-color-roze);
+    letter-spacing   : 1px;
+    background-color : $accent-color;
+    border           : none;
+    border-radius    : 15px;
+    padding          : 5px 20px;
+    cursor           : pointer;
+    box-shadow       : 0px 3px 1px rgba(0, 0, 0, 0.2);
+    transition       : box-shadow 250ms linear;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
+    }
+}
