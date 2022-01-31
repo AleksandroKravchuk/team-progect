@@ -142,6 +142,7 @@
       /* outline: 1px solid gold; */
       padding: 40px;
       // overflow-y: scroll;
+
       .franchise__btn {
         display: flex;
         align-items: center;
@@ -448,7 +449,8 @@
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 30px;
-  background-color: rgba(247, 235, 68, 0.4);
+  background-color: rgba(247, 235, 68, 0.5);
+  // background-image: linear-gradient(to left bottom, red, orange);
   transition: all 0.8s ease 0s;
 }
 .modal__title {
