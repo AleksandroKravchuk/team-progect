@@ -59,7 +59,9 @@
 .media-footer__icon {
   width: 32px;
   height: 32px;
-  fill: white;
+background-color: $text-color-white;
+fill: #FEA5BB;
+transition: fill 250ms linear, background-color 250ms linear;
 }
 .media-footer__zone {
   width: 33px;
@@ -78,16 +80,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $bckg-color-accent;
-  fill: $bckg-color-accent;
   border-radius: 50%;
-  background-color: white;
-  &:hover,
-  &:focus {
-    background-color: white;
-    color: $accent-color;
-    fill: $accent-color;
-  }
+  
+&:hover .media-footer__icon,
+&:focus .media-footer__icon {
+  fill: $accent-color;
+  background-color: $text-color-white;
+}
 }
 .footer__contact {
   display: flex;
