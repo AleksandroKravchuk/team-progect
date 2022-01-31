@@ -5,6 +5,7 @@
   @include secondary-text($fw: 400, $fs: 18px, $lx: 1.16, $color: $bckg-color-accent, $ls: 0.04);
   padding-left: 22px;
   padding-right: 66px;
+  padding-top: 113px;
   padding-bottom: 17px;
 }
 .footer__second-text {
@@ -16,13 +17,24 @@
   height: 20px;
   fill: white;
 }
+.media-footer__zone {
+  width: 32px;
+  height: 33px;
+}
+.media-footer__social-link {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 43px;
+  padding-right: 20.53px;
+  .media-footer__zone:not(:last-child) {
+    margin-right: 28.34px;
+  }
+}
 .media-footer__link {
   display: flex;
   align-items: center;
   justify-content: center;
   color: $bckg-color-accent;
-  width: 44px;
-  height: 44px;
   border-radius: 50%;
   background-color: white;
   &:hover,
@@ -32,6 +44,12 @@
     fill: $accent-color;
   }
 }
+.footer__contact {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 46px;
+  padding-right: 20px;
+}
 .footer__contact-text {
   @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $text-color-black, $ls: 0.04);
 }
@@ -40,4 +58,12 @@
 }
 .footer__text-rights {
   @include main-text($fw: 700, $fs: 14px, $lx: 1.52, $color: #907e82, $ls: 0.04);
+  padding-top: 22px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.footer__line {
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-top: 43px;
 }
