@@ -323,10 +323,12 @@ display: none;
 }
 // Фотографии
 .hero__kolo {
-  @media screen and (max-width: 767px) {
-    width: 346px;
-    top: 150%;
+     width: 260px;
+     top: 200px;
+    // top: 150%;
     left: 12%;
+  @media screen and (min-width: 400px) {
+ width: 346px;
   }
   position: absolute;
   top: 1%;
