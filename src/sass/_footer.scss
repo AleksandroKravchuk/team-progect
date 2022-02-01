@@ -24,44 +24,53 @@
   }
 }
 .footer__first-text {
-  @include secondary-text($fw: 400, $fs: 18px, $lx: 1.16, $color: $bckg-color-accent, $ls: 0.04);
+  align-items: flex-start;
+  width: 230px;
+  @include secondary-text($fw: 400, $fs: 18px, $lx: 1.16, $color: $bckg-color-accent, $ls: 0.04px);
   @media screen and (min-width: 768px) {
+    width: 340px;
     @include secondary-text(
       $fw: 400,
-      $fs: 26pxpx,
+      $fs: 26px,
       $lx: 1.14,
       $color: $bckg-color-accent,
-      $ls: 0.04
+      $ls: 0.04px
     );
   }
-  @media screen and (max-width: 1079px) {
-    display: block;
-    width: 70%;
-  }
   @media screen and (min-width: 1080px) {
-    @include secondary-text($fw: 400, $fs: 30px, $lx: 1.16, $color: $bckg-color-accent, $ls: 0.04);
+    @include secondary-text(
+      $fw: 400,
+      $fs: 30px,
+      $lx: 1.16,
+      $color: $bckg-color-accent,
+      $ls: 0.04px
+    );
+    width: 100%;
   }
 }
 .footer__second-text {
-  @include secondary-text($fw: 400, $fs: 34px, $lx: 1.14, $color: $accent-color, $ls: 0.04);
+  align-items: flex-start;
+  width: 230px;
+  @include secondary-text($fw: 400, $fs: 34px, $lx: 1.14, $color: $accent-color, $ls: 0.04px);
   @media screen and (max-width: 1079px) {
     margin-top: 17px;
-    display: block;
-    width: 70%;
   }
   @media screen and (min-width: 768px) {
-    @include secondary-text($fw: 400, $fs: 48px, $lx: 1.14, $color: $accent-color, $ls: 0.04);
+    width: 340px;
+    @include secondary-text($fw: 400, $fs: 48px, $lx: 1.14, $color: $accent-color, $ls: 0.04px);
   }
   @media screen and (min-width: 1080px) {
-    @include secondary-text($fw: 400, $fs: 58px, $lx: 1.14, $color: $accent-color, $ls: 0.04);
+    width: 100%;
+    @include secondary-text($fw: 400, $fs: 58px, $lx: 1.14, $color: $accent-color, $ls: 0.04px);
   }
 }
 .media-footer__icon {
+  border-radius: 50%;
   width: 32px;
   height: 32px;
-background-color: $text-color-white;
-fill: #FEA5BB;
-transition: fill 250ms linear, background-color 250ms linear;
+  background-color: $text-color-white;
+  fill: #fea5bb;
+  transition: fill 250ms linear, background-color 250ms linear;
 }
 .media-footer__zone {
   width: 33px;
@@ -72,6 +81,7 @@ transition: fill 250ms linear, background-color 250ms linear;
   justify-content: flex-end;
   padding-top: 43px;
   padding-right: 20.53px;
+
   .media-footer__zone:not(:last-child) {
     margin-right: 28.34px;
   }
@@ -81,12 +91,12 @@ transition: fill 250ms linear, background-color 250ms linear;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  
-&:hover .media-footer__icon,
-&:focus .media-footer__icon {
-  fill: $accent-color;
-  background-color: $text-color-white;
-}
+
+  &:hover .media-footer__icon,
+  &:focus .media-footer__icon {
+    fill: $accent-color;
+    background-color: $text-color-white;
+  }
 }
 .footer__contact {
   display: flex;
@@ -95,29 +105,35 @@ transition: fill 250ms linear, background-color 250ms linear;
   padding-right: 20px;
 }
 .footer__contact-text {
-  @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $text-color-black, $ls: 0.04);
+  @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $text-color-black, $ls: 0.04px);
   @media screen and (min-width: 768px) {
-    @include main-text($fw: 700, $fs: 14px, $lx: 1.86, $color: $text-color-black, $ls: 0.04);
+    @include main-text($fw: 700, $fs: 14px, $lx: 1.86, $color: $text-color-black, $ls: 0.04px);
   }
   @media screen and (min-width: 1080px) {
-    @include main-text($fw: 700, $fs: 16px, $lx: 1.86, $color: $text-color-black, $ls: 0.04);
+    @include main-text($fw: 700, $fs: 16px, $lx: 1.86, $color: $text-color-black, $ls: 0.04px);
   }
 }
 .footer__contact-text__tel {
-  @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $accent-color, $ls: 0.04);
+  @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $accent-color, $ls: 0.04px);
   @media screen and (min-width: 768px) {
-    @include main-text($fw: 700, $fs: 14px, $lx: 1.86, $color: $accent-color, $ls: 0.04);
+    @include main-text($fw: 700, $fs: 14px, $lx: 1.86, $color: $accent-color, $ls: 0.04px);
   }
   @media screen and (min-width: 1080px) {
-    @include main-text($fw: 700, $fs: 16px, $lx: 1.86, $color: $accent-color, $ls: 0.04);
+    @include main-text($fw: 700, $fs: 16px, $lx: 1.86, $color: $accent-color, $ls: 0.04px);
     margin-bottom: 50px;
   }
 }
 .footer__text-rights {
-  @include main-text($fw: 700, $fs: 14px, $lx: 1.52, $color: #907e82, $ls: 0.04);
+  @include main-text($fw: 700, $fs: 14px, $lx: 1.52, $color: #907e82, $ls: 0.04px);
   padding-top: 22px;
   padding-bottom: 25px;
   text-align: center;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
 }
 .footer__line {
   width: 100%;
