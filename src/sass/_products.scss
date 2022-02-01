@@ -1,5 +1,4 @@
 .products {
-
     padding-top: 121px;
     padding-bottom: 98px;
 
@@ -11,10 +10,6 @@
         padding-top: 127px;
         padding-bottom: 119px;
     } 
-
-    padding-top: 127px;
-    padding-bottom: 119px;
-
 }
 
 .products__line {
@@ -65,55 +60,65 @@
 }
 
 .products-set {
-        margin-right: 0;
-        margin-bottom: 0;
-        // margin: -15px;
-
+       text-align: center;
         @media screen and (min-width: 768px) {
             display: flex;
+            margin-right: -20px;
         }
+        @media screen and (min-width: 1280px) {
+    margin-right: -30px;
+}
 }
 
 .products-set__box {
         position: relative;
         width: 100%;
         height: 100%;
-        padding-top: 150px;
-        padding-bottom: 40px;
+         @media screen and (max-width: 767px) {
+     margin-left: auto;
+        margin-right: auto;
+        width: 280px;
+ }
+          @media screen and (min-width: 768px) {
+        flex-basis:calc((100%-60px)/3);
+        margin-right: 20px;
+         }
+         @media screen and (min-width: 1280px) {
+      flex-basis  : calc((100%-90px)/3);
+      margin-right: 30px;
+  }
 
-      @media screen and (max-width: 767px) {
-        padding-top: 163px;
-        padding-bottom: 50px;
-        
-    &:not(:last-child) {  
-        margin-bottom: 130px;
-      }
-    } 
+        &:not(:last-child) {
+           @media screen and (max-width: 767px) {
+    margin-bottom: 130px;} 
+            }
 
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
-        padding-top: 143px;
-        padding-bottom: 40px;
-   
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }   
-    
-      @media screen and (min-width: 1280px) {
-        padding-top: 163px;
-        padding-bottom: 50px;
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
-    }   
+         
 }
+.products-set__box
 .products__content {
     display: flex;
     flex-direction: column;
+     padding-top: 150px;
+ padding-bottom: 40px;
+ padding-left  : 40px;
+     padding-right : 40px;
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+     padding-top: 143px;
+     padding-bottom: 40px;
+     padding-left : 11px;
+padding-right : 11px;
+ }
+     @media screen and (min-width: 1280px) {
+        padding-top: 163px;
+        padding-bottom: 50px;
+padding-left : 44px;
+padding-right : 44px;
+    } 
+
 }
 
 .products__item {
-    // position: relative;
     font-family: Titan One;
     font-weight: normal;
     text-align: center;
@@ -122,15 +127,11 @@
     color: #FFFFFF;
     font-size: 20px;
     line-height: 1.15;
-
-    @media screen and (min-width: 768px) {
-       
-    }   
-   
+  
     @media screen and (min-width: 1280px) {
         font-size: 30px;
         line-height: 1.06;
-        // padding-bottom: 32px;
+        
     }   
 
 }
@@ -163,6 +164,7 @@
     }
 
     @media screen and (min-width: 768px) {
+        left: 0;
         width: 220px;
         height: 226px;
         top: -105px;
@@ -221,6 +223,7 @@
     }
 
     @media screen and (min-width: 768px) {
+        left: 0;
         width: 220px;
         height: 226px;
         top: -105px;
@@ -275,6 +278,7 @@
     }
 
     @media screen and (min-width: 768px) {
+        left: 0;
         width: 220px;
         height: 226px;
         top: -105px;
@@ -352,31 +356,14 @@
     text-align: center;
     letter-spacing: 0.04em;
     color: #FFFFFF;
-   
-    // padding-bottom: 50px;
-    // padding-top: 32px;
-    @media screen and (max-width: 767px){
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-
-    }
-
-    @media screen and (min-width: 768px) {
-        padding-left: 11px;
-        padding-right: 11px;
-        padding-top: 30px;
-        padding-bottom: 62px;
-    }
-  
-
+    margin-top: 32px;
     @media screen and (min-width: 1280px) {
-        padding-left: 44px;
-        padding-right: 44px;
+    margin-top: 30px;
+}
+    @media screen and (min-width: 1280px) {
         font-size: 16px;
         line-height: 1.75; 
-        }
+    }
 }
 
 .products__button {
@@ -386,14 +373,21 @@
     fill: $accent-color;
     border: none;
     border-radius: 50%;
-    margin: 0 auto;
+    margin-top: 30px;
     cursor: pointer;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
     &:hover,
     &:focus {
       background-color: #ecebeb;
       fill: #c7133e;
       transition: 300ms linear;
     }
+      @media screen and (min-width: 768px) {
+     margin-top: 40px;
+  }
 }
 
