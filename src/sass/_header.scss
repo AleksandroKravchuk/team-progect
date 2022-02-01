@@ -322,18 +322,41 @@ display: none;
   }
 }
 // Фотографии
+
+
+.hero__kolo-mob {
+   width: 73%;
+       top  : 150%;
+       right: 0;
+       position                 : absolute;
+     animation-name           : kolo;
+     animation-duration       : 2s;
+     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+     @keyframes kolo {
+       0% {
+         opacity: 0;
+       }
+
+       100% {
+         opacity: 1;
+       }
+     }
+     @media screen and (min-width: 480px) {
+  width: 270px;
+}
+     @media screen and (min-width: 768px) {
+      display: none;
+     }  
+}
 .hero__kolo {
-     width: 260px;
-     top: 200px;
-    // top: 150%;
-    left: 12%;
-  @media screen and (min-width: 400px) {
- width: 346px;
-  }
-  position: absolute;
-  top: 1%;
-  left: 40%;
+     display: none;
+ @media screen and (min-width: 768px) {
+   display: block;
+   position: absolute;
   width: 324px;
+   top     : 3%;
+   left    : 42%;
+ }
   animation-name: kolo;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
@@ -352,10 +375,9 @@ display: none;
   }
 }
 
+
 .hero__milk {
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
+    display: none;
     position: absolute;
     top: 68%;
     left: 0;
@@ -373,15 +395,15 @@ display: none;
         transform: translateX(0);
       }
     }
-  }
-
-  @media screen and (min-width: 1280px) {
-    left: 5%;
-    width: 188px;
-    top: 70%;
-  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    top: 66%;
 }
-
+@media screen and (min-width: 1280px) {
+  left: 8%;
+  top: 80%;
+}
+}
 .hero__girl {
   display: none;
   @media screen and (min-width: 768px) {
@@ -411,6 +433,10 @@ display: none;
   }
 }
 .hero__ice {
+  
+   @media screen and (max-width: 480px) {
+   width: 143px;
+ }
   @media screen and (max-width: 767px) {
     width: 171px;
     top: 180%;
