@@ -1,7 +1,7 @@
 .menu-button  {
     position: absolute;
-    top: 23px;
-    right: 34px;
+    top: 25px;
+    left:  25px;
     border          : none;
     background-color: transparent;
     cursor: pointer;
@@ -20,7 +20,6 @@
     @media screen and (max-width: 767px) {
         margin-left: auto;
     }
-   
     background-color: transparent;
     border          : none;
     cursor          : pointer;
@@ -46,28 +45,45 @@
 left : -30;     
 
     }
-
+transform: translateX(+150%);
 @media screen and (max-width: 1279px) {
 display : block;
  position: absolute;
  height  : 100vh;
- width   : 254px;
+ width : 100vw;  
  padding: 24px;
 background-color: #E17992;
-transform: translateX(-100%);
 opacity: 0;
 transition: transform 300ms linear, opacity 300ms linear;
 }
+ @media screen and (min-width: 480px) {
+   transform: translateX(+100%);
+   width   : 254px;
+ }
+   @media screen and (min-width: 768px) {
+       transform: translateX(300%);
+   }
 }
 .page-header__nav.is-open{
+    transform: translateX(0%);
+        @media screen and (min-width:480px) {
+         transform: translateX(20%);
+    }
+    @media screen and (min-width:768px) {
+    transform: translateX(180%);
+}
     @media screen and (max-width: 1279px) {
     z-index: 300;
-    transform: translateX(0);
     opacity: 1;
 }}
   
 .page-header__button-mobile {
 @include button();
+    @media screen and (max-width: 479px) {
+        width: 60%;
+       margin-left: auto;
+       margin-right: auto;
+    }
 margin-top: 40px;
 width: 100%;
 justify-content: center;

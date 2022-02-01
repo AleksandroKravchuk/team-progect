@@ -4,7 +4,7 @@
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 39px;
-    
+     padding-top: 125px;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center 766px;
@@ -36,7 +36,7 @@
     }
 
     &__lable {
-        padding-top: 125px;
+       
         @include secondary-text($fw: 400, $fs: 18px, $lx: 1.17, $color: $pre-title-text-color, $ls:0.06em);
         text-align: center;
     
@@ -50,8 +50,8 @@
     }
 
     &__title {
-        padding-top: 15px;
-        padding-bottom: 25px;
+        margin-top: 15px;
+        margin-bottom: 25px;
         width: 200px;
         margin-left: auto;
         margin-right: auto;
@@ -61,12 +61,12 @@
         @media screen and (min-width: 768px) {
             width: 100%;
             @include secondary-text($fw: 400, $fs: 48px, $lx: 1.14, $color: $accent-color, $ls:0.04em);
-            padding-bottom: 50px;
+            margin-bottom: 50px;
         }
     
         @media screen and (min-width: 1280px) {
             @include secondary-text($fw: 400, $fs: 58px, $lx: 1.14, $color: $accent-color, $ls:0.04em);
-            padding-bottom: 55px;
+           margin-bottom: 55px;
         }
     }
 
@@ -80,10 +80,12 @@
         width: 280px;
         margin-left: auto;
         margin-right: auto;
-    
+     @media screen and (max-width: 767px) {
+  margin-bottom: 46px;
+ }
         @media screen and (min-width: 768px) {
            width: 340px;
-           margin-left: 0;
+           margin-right: 74px;
         }
     
         @media screen and (min-width: 1280px) {
@@ -109,9 +111,8 @@
 
     &__text {
         @include main-text($fw: 500, $fs: 12px, $lx: 1.62, $color: $text-color-black, $ls:0.04em); 
-        padding-top: 46px;
         text-align: left;
-    
+    margin-bottom: 46px;
         @media screen and (min-width: 768px) {
             @include main-text($fw: 500, $fs: 14px, $lx: 1.76, $color: $text-color-black, $ls:0.04em); 
         }
@@ -123,21 +124,34 @@
 
     &__description {
         @include main-text($fw: 500, $fs: 12px, $lx: 1.62, $color: $gray-pink-text-color, $ls:0.04em);
-        padding-top: 46px;
-        padding-bottom: 46px;
+       margin-bottom: 46px;
         text-align: left;
     
         @media screen and (min-width: 768px) {
             @include main-text($fw: 500, $fs: 14px, $lx: 1.76, $color: $gray-pink-text-color, $ls:0.04em); 
-            padding-bottom: 62px;
+            margin-bottom: 30px;
         }
         
          @media screen and (min-width: 1280px) {
             @include main-text($fw: 500, $fs: 14px, $lx: 1.93, $color: $gray-pink-text-color, $ls:0.04em);
-            padding-top: 35px;
+            // padding-top: 35px;
         }
     }
+&__description-sp {
+     @include main-text($fw: 500, $fs: 12px, $lx: 1.62, $color: $gray-pink-text-color, $ls:0.04em);
+ margin-bottom: 17px;
 
+
+ @media screen and (min-width: 768px) {
+     @include main-text($fw: 500, $fs: 14px, $lx: 1.76, $color: $gray-pink-text-color, $ls:0.04em);
+     margin-bottom: 62px;
+ }
+
+ @media screen and (min-width: 1280px) {
+     @include main-text($fw: 500, $fs: 14px, $lx: 1.93, $color: $gray-pink-text-color, $ls:0.04em);
+     margin-bottom: 45px;
+ }
+}
     &__button {
         @include button ($img: url(../images/), $wh:176px, $ht:44px, $bz:cover); 
         font-family: DM Sans;
@@ -172,11 +186,11 @@
 
 .advantages {
     background-color: $bckg-color-roze;
+    padding-bottom: 50px;
 }
 
 .feature {
     display: block;
-    padding-bottom: 50px;
     width: 280px;
     margin-left: auto;
     margin-right: auto;
@@ -221,7 +235,7 @@
     }
 
     &__text {
-        padding-top: 15px;
+        margin-top:  15px;
         @include main-text($fw: 700, $fs: 12px, $lx: 1.7, $color: $text-color-black, $ls:0.04em);
         width: 230px;
     
