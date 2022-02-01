@@ -45,7 +45,7 @@
 left : -30;     
 
     }
-transform: translateX(+10%);
+transform: translateX(0%);
 @media screen and (max-width: 1279px) {
 display : block;
  position: absolute;
@@ -65,7 +65,7 @@ transition: transform 300ms linear, opacity 300ms linear;
    }
 }
 .page-header__nav.is-open{
-    transform: translateX(0%);
+    transform: translateX(-10%);
         @media screen and (min-width:480px) {
          transform: translateX(20%);
     }
