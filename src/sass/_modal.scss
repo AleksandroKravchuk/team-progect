@@ -150,6 +150,7 @@
     .modal-buy__img:focus,
     .modal-buy__img:hover {
       cursor: pointer;
+      transition: transform 550ms linear;
       transform: scale(1.5);
     }
   }

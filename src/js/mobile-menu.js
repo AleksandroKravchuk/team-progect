@@ -28,5 +28,6 @@
     document.body.classList.remove("modal-open");
     menuBtnRef.classList.remove("is-open");
         return false;
-    });
+   });
+  
 })();

@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
    var modalButtons = document.querySelectorAll('.js-open-modal'),
        overlay      = document.querySelector('.js-overlay-modal'),
        closeButtons = document.querySelectorAll('.js-modal-close');
-
+   mobileMenuRef = document.querySelector("[data-menu]"),
+      menuBtnRef = document.querySelector("[data-menu-button]");
 
    /* Перебираем массив кнопок */
    modalButtons.forEach(function(item){
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
          /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
             и будем искать модальное окно с таким же атрибутом. */
          var modalId = this.getAttribute('data-modal'),
+            mobileMenuRef = document.querySelector("[data-menu]"),
+               menuBtnRef = document.querySelector("[data-menu-button]");
              modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
 
 
@@ -31,8 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
             подложке и окну чтобы показать их. */
          modalElem.classList.add('active');
          overlay.classList.add('active');
+         mobileMenuRef.classList.remove("is-open");
+          menuBtnRef.classList.remove("is-open");
       }); // end click
-
+ 
    }); // end foreach
 
 
@@ -61,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     overlay.addEventListener('click', function() {
         document.querySelector('.modal.active').classList.remove('active');
-        this.classList.remove('active');
+       this.classList.remove('active');
+       
     });
 
 
