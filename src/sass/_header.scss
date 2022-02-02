@@ -16,6 +16,9 @@
 }
 .header-hero .container {
   position: relative;
+    @media screen and (max-width: 479px) {
+    max-width: 300px;
+  }
 }
 .page-header__nav {
   z-index: 10;
