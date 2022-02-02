@@ -38,17 +38,17 @@
 @media screen and (max-width:767px) {
   display: none;  
  top     : -5px;
- left    : 0;   
+ right: 0;
   
     }
         @media screen and (min-width: 768px) and (max-width: 1279px){
  top : -37px;
-left : -30;     
+right: 0;     
 
     }
 
 @media screen and (max-width: 1279px) {
-  transform: translateX(30%);
+  transform: translateX(50%);
 display: block;
  position: absolute;
  height  : 100vh;
@@ -58,24 +58,24 @@ opacity: 0;
 transition: transform 300ms linear, opacity 300ms linear;
 }
  @media screen and (min-width: 480px) and (max-width:767px){
-   transform: translateX(100%);
+   transform: translateX(50%);
    width   : 254px;
  }
    @media screen and (min-width: 768px) and (max-width:1279px){
-       transform: translateX(250%);
-       width : 254px;
+       transform: translateX(50%);
+       
    }
 }
 .page-header__nav.is-open{
     transform: translateX(0%);
-    width: 100%;
-    
+    // width: 100%;
+    width: 254px;
         @media screen and (min-width:480px) {
-         transform: translateX(18%);
-        width: 254px;
+         transform: translateX(0%);
+       
     }
     @media screen and (min-width:768px) {
-    transform: translateX(180%);
+    transform: translateX(0%);
 }
     @media screen and (max-width: 1279px) {
     z-index: 300;
@@ -85,7 +85,7 @@ transition: transform 300ms linear, opacity 300ms linear;
 .page-header__button-mobile {
 @include button();
     @media screen and (max-width: 479px) {
-        width: 60%;
+        width: 80%;
        margin-left: auto;
        margin-right: auto;
     }
