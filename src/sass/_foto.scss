@@ -3,7 +3,7 @@
   padding-bottom: 40px;
   background-size: cover;
   background-image: linear-gradient($bckg-color-roze 50%, $white-text-color 50%);
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     padding-top: 70px;
     padding-bottom: 60px;
   }
@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     margin: -3px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin: -3px;
     }
   }
@@ -24,7 +24,7 @@
   &__grid-f {
     width: 100%;
     margin: 3px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin: 3px;
     }
   }
@@ -42,10 +42,10 @@
     max-width: 100%;
     border-radius: 5px;
     transition: 600ms linear;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       border-radius: 10px;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       border-radius: 15px;
     }
     &:hover,
@@ -61,11 +61,11 @@
     &--big {
       max-width: 100px;
       max-height: 100px;
-      @media screen and (min-width: 768px) {
-        max-width: 170px;
-        max-height: 170px;
+      @media screen and (min-width: $tablet) {
+        max-width: 155px;
+        max-height: 155px;
       }
-      @media screen and (min-width: 1280px) {
+      @media screen and (min-width: $desktop) {
         max-width: 350px;
         max-height: 250px;
       }
@@ -74,11 +74,11 @@
     &--small {
       max-width: 60px;
       max-height: 75px;
-      @media screen and (min-width: 768px) {
-        max-width: 105px;
-        max-height: 140px;
+      @media screen and (min-width: $tablet) {
+        max-width: 115px;
+        max-height: 155px;
       }
-      @media screen and (min-width: 1280px) {
+      @media screen and (min-width: $desktop) {
         max-width: 165px;
         max-height: 220px;
       }
