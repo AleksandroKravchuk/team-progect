@@ -36,6 +36,9 @@
  }
 }
 .footer__first-text {
+  @media screen and (max-width: 767px) {
+  width: 232px;
+}
   align-items: flex-start;
   @include secondary-text($fw: 400, $fs: 18px, $lx: 1.16, $color: $bckg-color-accent, $ls: 0.04px);
   @media screen and (min-width: 768px) {
@@ -60,6 +63,9 @@
   }
 }
 .footer__second-text {
+    @media screen and (max-width: 767px) {
+    width: 200px;
+  }
   align-items: flex-start;
   @include secondary-text($fw: 400, $fs: 34px, $lx: 1.14, $color: $accent-color, $ls: 0.04px);
   @media screen and (max-width: 1079px) {
@@ -69,7 +75,7 @@
    
     @include secondary-text($fw: 400, $fs: 48px, $lx: 1.14, $color: $accent-color, $ls: 0.04px);
   }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1280px) {
 
     @include secondary-text($fw: 400, $fs: 58px, $lx: 1.14, $color: $accent-color, $ls: 0.04px);
   }
@@ -103,22 +109,27 @@
     background-color: $text-color-white;
   }
 }
-
+.footer__contact {
+     @media screen and (max-width: 767px) {
+    text-align: end;
+  }
+}
 .footer__contact-text {
   @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $text-color-black, $ls: 0.04px);
   @media screen and (min-width: 768px) {
     @include main-text($fw: 700, $fs: 14px, $lx: 1.86, $color: $text-color-black, $ls: 0.04px);
   }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1280px) {
     @include main-text($fw: 700, $fs: 16px, $lx: 1.86, $color: $text-color-black, $ls: 0.04px);
   }
 }
 .footer__contact-text__tel {
+ 
   @include main-text($fw: 700, $fs: 12px, $lx: 1.86, $color: $accent-color, $ls: 0.04px);
   @media screen and (min-width: 768px) {
     @include main-text($fw: 700, $fs: 14px, $lx: 1.86, $color: $accent-color, $ls: 0.04px);
   }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1280px) {
     @include main-text($fw: 700, $fs: 16px, $lx: 1.86, $color: $accent-color, $ls: 0.04px);
     
   }
