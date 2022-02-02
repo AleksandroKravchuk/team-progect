@@ -57,26 +57,26 @@ background-color: #E17992;
 opacity: 0;
 transition: transform 300ms linear, opacity 300ms linear;
 }
- @media screen and (min-width: 480px) and (max-width:767px){
-   transform: translateX(50%);
-   width   : 254px;
- }
-   @media screen and (min-width: 768px) and (max-width:1279px){
-       transform: translateX(50%);
+//  @media screen and (min-width: 480px) and (max-width:767px){
+//    transform: translateX(50%);
+//    width   : 254px;
+//  }
+//    @media screen and (min-width: 768px) and (max-width:1279px){
+//        transform: translateX(50%);
        
-   }
+//    }
 }
 .page-header__nav.is-open{
     transform: translateX(0%);
     // width: 100%;
     width: 254px;
-        @media screen and (min-width:480px) {
-         transform: translateX(0%);
+//         @media screen and (min-width:480px) {
+         
        
-    }
-    @media screen and (min-width:768px) {
-    transform: translateX(0%);
-}
+//     }
+//     @media screen and (min-width:768px) {
+    
+// }
     @media screen and (max-width: 1279px) {
     z-index: 300;
     opacity: 1;
