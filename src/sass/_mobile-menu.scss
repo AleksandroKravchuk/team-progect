@@ -48,12 +48,13 @@ left : -30;
     }
 
 @media screen and (max-width: 1279px) {
-  transform: translateX(120%);  
+  transform: translateX(20%);  
 display: block;
  position: absolute;
  height  : 100vh;
  width: 100%;
  padding: 24px;
+//  right: -100px;
 background-color: #E17992;
 opacity: 0;
 transition: transform 300ms linear, opacity 300ms linear;
