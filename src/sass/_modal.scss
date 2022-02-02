@@ -291,11 +291,13 @@
         margin-left: 10px;
         width: 183px;
         margin: 10px auto 0 auto;
+        transition: all 250ms linear;
         &:hover,
         &:focus {
           cursor: pointer;
           background: #c7133e;
           transform: scale(1.2);
+          transition: all 250ms linear;
         }
       }
     }
@@ -379,10 +381,13 @@
       height: 100%;
       width: 100%;
       border-radius: 15px;
+      scale: 1;
+      transition: all 300ms linear;
     }
     .modal-franchise__img:focus,
     .modal-franchise__img:hover {
       cursor: pointer;
+      transition: all 300ms linear;
       transform: scale(1.05);
     }
   }
