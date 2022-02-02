@@ -49,7 +49,6 @@ left : -30;
 
 @media screen and (max-width: 1279px) {
   transform: translateX(25%);  
-  width: 100%;
 display: block;
  position: absolute;
  height  : 100vh;
@@ -86,7 +85,7 @@ transition: transform 300ms linear, opacity 300ms;
 .page-header__button-mobile {
 @include button();
     @media screen and (max-width: 479px) {
-        width: 50%;
+        width: 80%;
        margin-left: auto;
        margin-right: auto;
     }
