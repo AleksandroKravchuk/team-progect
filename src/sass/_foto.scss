@@ -38,6 +38,7 @@
   }
 
   &__photo {
+    cursor: pointer;
     display: inline-block;
     max-width: 100%;
     border-radius: 5px;
@@ -52,6 +53,7 @@
     &:focus {
       z-index: 9;
       transform: scale(2) rotateY(180deg);
+      // cursor: pointer;
     }
 
     &:not(:last-child) {
