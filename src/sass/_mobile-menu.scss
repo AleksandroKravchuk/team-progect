@@ -48,14 +48,14 @@ left : -30;
     }
 
 @media screen and (max-width: 1279px) {
-  transform: translateX(25%);  
+  transform: translateX(30%);
 display: block;
  position: absolute;
  height  : 100vh;
  padding: 24px;
 background-color: #E17992;
 opacity: 0;
-transition: transform 300ms linear, opacity 300ms;
+transition: transform 300ms linear, opacity 300ms linear;
 }
  @media screen and (min-width: 480px) and (max-width:767px){
    transform: translateX(100%);
@@ -71,7 +71,7 @@ transition: transform 300ms linear, opacity 300ms;
     width: 100%;
     
         @media screen and (min-width:480px) {
-         transform: translateX(20%);
+         transform: translateX(18%);
         width: 254px;
     }
     @media screen and (min-width:768px) {
@@ -85,7 +85,7 @@ transition: transform 300ms linear, opacity 300ms;
 .page-header__button-mobile {
 @include button();
     @media screen and (max-width: 479px) {
-        width: 80%;
+        width: 60%;
        margin-left: auto;
        margin-right: auto;
     }
