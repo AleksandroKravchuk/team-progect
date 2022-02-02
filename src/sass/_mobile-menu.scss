@@ -48,7 +48,7 @@ left : -30;
     }
 
 @media screen and (max-width: 1279px) {
-  transform: translateX(60%);
+  transform: translateX(40%);
 display: block;
  position: absolute;
  height  : 100vh;
@@ -67,7 +67,7 @@ transition: transform 300ms linear, opacity 300ms linear;
    }
 }
 .page-header__nav.is-open{
-    transform: translateX(17%);
+    transform: translateX(18%);
     // width: 100%;
     width: 254px;
         @media screen and (min-width:480px) {
