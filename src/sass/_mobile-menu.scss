@@ -1,10 +1,13 @@
 .menu-button  {
     position: absolute;
-    top: 25px;
-    left:  25px;
     border          : none;
     background-color: transparent;
+    top: 25px;
     cursor: pointer;
+    right: 25px; 
+      @media screen and (min-width: 768px) {
+     left: 25px;
+  }
     @media screen and (min-width: 1280px) {
         display: none;
     }
@@ -38,7 +41,7 @@
 @media screen and (max-width:767px) {
   display: none;  
  top     : -5px;
- right: 0;
+ left:  0;
   
     }
         @media screen and (min-width: 768px) and (max-width: 1279px){
@@ -48,7 +51,7 @@ right: 0;
     }
 
 @media screen and (max-width: 1279px) {
- transform: translateX(30%); 
+ transform: translateX(50%); 
 display: block;
  position: absolute;
  height  : 100vh;
@@ -56,6 +59,10 @@ display: block;
 background-color: #E17992;
 opacity: 0;
 transition: transform 300ms linear, opacity 300ms linear;
+}
+@media screen and (max-width: 767px) {
+    transform       : translateX(-50%);
+   
 }
 }
 .page-header__nav.is-open{
