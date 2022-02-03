@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
             и будем искать модальное окно с таким же атрибутом. */
          var modalId = this.getAttribute('data-modal'),
             mobileMenuRef = document.querySelector("[data-menu]"),
-               menuBtnRef = document.querySelector("[data-menu-button]");
+            menuBtnRef = document.querySelector("[data-menu-button]")
+         document.body.classList.toggle("js-open-modal");
              modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
 
 
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       item.addEventListener('click', function(e) {
          var parentModal = this.closest('.modal');
-
+document.body.classList.remove("js-open-modal");
          parentModal.classList.remove('active');
          overlay.classList.remove('active');
       });
