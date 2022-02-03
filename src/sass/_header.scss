@@ -13,6 +13,9 @@
 .page-header {
   display: flex;
   align-items: center;
+    @media screen and (max-width: 480px) {
+ max-width: 100vw;
+  }
 }
 .header-hero .container {
   max-width: 100%;
