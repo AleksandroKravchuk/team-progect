@@ -21,7 +21,9 @@
   /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
-
+@media screen and (max-width:767px) {
+  top: 400px;
+}
   /*  Установаем ширину окна  */
   width: 100%;
   // max-width: 500px;
